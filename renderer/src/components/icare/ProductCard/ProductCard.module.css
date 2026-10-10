@@ -1,0 +1,98 @@
+.card {
+	position: relative;
+	height: 190px;
+	width: 100%;
+	border-radius: 20px;
+    background: var(--cardBackground);             
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	position: absolute;
+    top: 65px;
+    left: 40px;
+}
+
+.content {
+	position: relative;
+	padding: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius: 20px;
+    padding-top: 1rem;
+    padding-left: 0.75rem;
+}
+
+.title {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--metricValue);
+	width: 100%;
+
+}
+.description{
+    font-size: 12px;
+	font-weight: 400;
+	color: var(--metricValue);
+}
+
+@media (min-width: 1024px) {
+	.card {
+		flex: 1 1 calc(25% - 1rem);
+	}
+}
+
+@media (max-width: 768px) {
+	.card {
+		width: 100%;
+		height: 170px;
+		margin: 0 auto;
+		max-width: 400px;
+	}
+	
+	.image {
+		top: 55px;
+		left: 30px;
+		width: 90%;
+		height: 90%;
+	}
+	
+	.title {
+		font-size: 14px;
+	}
+	
+	.description {
+		font-size: 11px;
+	}
+
+}
+
+@media (max-width: 480px) {
+	.card {
+		height: 150px;
+		border-radius: 16px;
+	}
+	
+	.image {
+		top: 45px;
+		left: 25px;
+	}
+	
+	.title {
+		font-size: 13px;
+	}
+	
+	.description {
+		font-size: 10px;
+	}
+}

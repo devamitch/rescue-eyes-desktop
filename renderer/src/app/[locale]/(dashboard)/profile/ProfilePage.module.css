@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+  padding: 20px;
+}
+.mainSection {
+	display: flex;
+	flex-direction: row;
+	gap: 0.75rem;
+	width: 100%;
+}
+.Historysection {
+	width: 100%;
+	height: auto;
+	color: var(--metricValue);
+	background: var(--cardBackground);
+	border-radius: 20px;
+	padding: 1.25rem;
+}
+
+.title {
+	font-size: 22px;
+	font-weight: 600;
+	width: 100%;
+}
+
+.description {
+	font-size: 15px;
+	font-weight: 500;
+	width: 100%;
+}
+.Logoutbutton {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+  color: var(--vHighValue);
+	cursor: pointer;
+  padding: 6px;
+}
+
+
+
+@media (max-width: 460px) {
+  .container{
+    gap: 1.25rem;
+    padding: 10px;
+  }
+  .Historysection {
+     padding: 1rem;
+  }
+	.title {
+		font-size: 18px;
+	}
+	.description {
+		font-size: 13px;
+	}
+}

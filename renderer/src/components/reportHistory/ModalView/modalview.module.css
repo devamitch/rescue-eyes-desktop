@@ -1,0 +1,104 @@
+
+.reportDetailHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+	padding: 16px 20px;
+	background: var(--cardBackground);
+	border-radius: 20px;
+}
+
+.reportTimestamp {
+	font-size: 13px;
+	color: var(--SubtleMetricValue);
+	font-weight: 600;
+}
+
+.reportStatus {
+	padding: 6px 12px;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.reportMetrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.metricCard {
+	background: var(--cardBackground);
+	border-radius: 20px;
+	padding: 12px;
+	padding-left: 20px;
+	text-align: start;
+	position: relative;
+}
+
+.cardIcon {
+	position: absolute;
+	top: 12px;
+	right: 15px;
+	color: var(--SubtleMetricValue);
+}
+
+.metricCard h4 {
+	font-size: 13px;
+    font-weight: 600;
+	color: var(--metricValue);
+	margin: 0 0 8px 0;
+	font-weight: 500;
+}
+
+.metricValue {
+	font-size: 28px;
+	font-weight: 600;
+	margin: 8px 0 4px 0;
+	color: var(--metricValue);
+}
+
+.metricUnit {
+	font-size: 13px;
+    font-weight: 400;
+	color: var(--metricValue);
+}
+
+/* Status color classes */
+.normal {
+	background: #7baf7b;
+	color: white;
+}
+
+.blinkrate {
+	background: #ffb74d;
+	color: white;
+}
+
+.eyestrain {
+	background: #f44336;
+	color: white;
+}
+
+@media (max-width: 768px) {
+
+	.reportMetrics {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 16px;
+	}
+
+	.reportDetailHeader {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+		text-align: left;
+	}
+}
+@media (max-width: 480px) {
+	
+	.reportMetrics {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+}

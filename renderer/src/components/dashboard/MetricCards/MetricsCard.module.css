@@ -1,0 +1,139 @@
+.card {
+	height: 220px;
+	width: 100%;
+	border-radius: 20px;
+	background: var(--cardBackground);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.contentSection {
+	position: relative;
+	padding: 1.3rem;
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: var(--metricValue);
+}
+
+.name {
+	font-size: 18px;
+	color: var(--subtleMetricValue);
+	font-weight: 500;
+}
+.valueContainer {
+	display: flex;
+	gap: 0.5rem;
+	align-items: baseline;
+}
+
+.value {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--metricValue);
+}
+
+.unit {
+	font-size: 1rem;
+	color: var(--subtleMetricValue);
+}
+
+.chartSection {
+	position: relative;
+	width: 100%;
+	height: 5rem;
+	padding: 0.25rem;
+	opacity: 0.9;
+}
+
+.tooltip {
+	background:var(--subtleCardBackground);
+	border-radius: 6px;
+	padding: 4px;
+}
+
+.tooltipLabel {
+	margin: 0;
+	font-weight: 600;
+	color: var(--metricValue);
+	font-size: 12px;
+}
+
+.tooltipTime {
+	margin: 0;
+	color: var(--subtleMetricValue);
+	font-size: 10px;
+	margin-top: 2px;
+}
+.status {
+	margin: 0;
+	color: var(--metricValue);
+	font-size: 10px;
+	margin-top: 2px;
+}
+
+.custom-tooltip {
+	background: var(--subtleCardBackground);
+	border-radius: 6px;
+	padding: 8px 12px;
+	min-width: 80px;
+}
+
+.tooltip-time {
+	margin: 0;
+	font-weight: 600;
+	color: var(--metricValue);
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.tooltip-value {
+	margin: 0;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.chartSection :global(.recharts-x-axis) {
+	overflow: visible;
+}
+
+.chartSection :global(.recharts-x-axis .recharts-cartesian-axis-tick) {
+	transform: translateY(5px);
+}
+
+
+@media (max-width: 768px) {
+	.card {
+		height: 200px;
+	}
+	
+}
+
+@media (max-width: 600px) {
+	.card{
+		padding: 0px ;
+		height: 160px;
+	}
+	.name{
+		font-size: 11px;
+	}
+	.value{
+		font-size: 22px;
+	}
+	.status{
+     font-size: 9px;
+	}
+	.unit{
+		font-size: 10px;
+	}
+	.icon{
+		display: none;
+	}
+	
+}

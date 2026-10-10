@@ -1,0 +1,175 @@
+
+.hospitalName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: var(--metricValue);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.headerSection {
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.starIcon {
+  color: var(--modValue);
+  fill: var(--modValue);
+}
+
+.ratingText {
+  color: var(--metricValue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.imageSection {
+  display: flex;
+  height: 220px;
+  width: auto;
+  gap: 8px;
+}
+
+.mainImageContainer {
+  flex: 2;
+  position: relative;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.additionalImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.additionalImageContainer {
+  flex: 1;
+  position: relative;
+}
+
+.additionalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+ padding: 10px 0;
+ margin-bottom: 10px;
+}
+
+.actionButton {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background:  var(--metricValue) ;
+  border-radius: 20px;
+  color:var(--cardBackground);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  cursor: pointer;
+  background-color:var(--lightMetricValue);
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+ gap: 10px;
+}
+
+.detailLabel {
+  display: flex;
+  align-items: center;
+  color: var(--metricValue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detailIcon {
+  color: var(--SubtleMetricValue);
+  margin-right: 8px;
+}
+
+.detailText {
+  color: var(--metricValue);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+  padding: 0px 4px;
+}
+.hours {
+  color: var(--lowValue);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+  padding: 0px 4px;
+}
+@media (max-width: 768px) {
+  .imageSection{
+    height: 130px;
+  }
+  .actionButton{
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 16px;
+  }
+  .hospitalName {
+    font-size: 20px;
+  }
+   .detailLabel {
+    font-size: 14px;
+    justify-items: flex-start;
+  }
+  .hours,
+  .detailText {
+    font-size: 12px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+.imageSection{
+  height: 120px;
+}
+.actionButton{
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 14px;
+  }
+  .hospitalName {
+    font-size: 18px;
+  }
+.detailLabel {
+    font-size: 12px;
+  }
+  .hours,
+.detailText {
+    font-size: 10px;
+  }
+
+}

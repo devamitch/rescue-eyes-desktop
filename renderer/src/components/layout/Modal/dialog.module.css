@@ -1,0 +1,101 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: var(--subtleCardBackground);
+  border-radius: 30px;
+  width: 700px;
+  height: auto;
+  padding: 10px;
+
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.closeButton {
+    background-color: var(--cardBackground);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--metricValue);
+  transition: background-color 0.2s ease;
+}
+
+
+.modalContent {
+  padding: 10px;
+  max-height: calc(85vh - 80px);
+  overflow-y: auto;
+}
+
+.modalFooter {
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95vw;
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .modalHeader h2 {
+    font-size: 18px;
+  }
+
+  .modalContent {
+    padding: 10px;
+  }
+
+  .modalFooter {
+    padding-top: 6px;
+  }
+
+ 
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 98vw;
+    max-height: 95vh;
+    padding: 8px;
+  }
+
+  .modalContent {
+    padding:8px;
+  }
+  .modalFooter {
+    padding-top: 4px;
+    
+  width: 100%;
+  }
+
+}

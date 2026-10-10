@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ocular Metrics Monitor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Chart.js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+		<!-- MediaPipe FaceMesh -->
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+			:root {
+				--cyan: #00ffff;
+				--cyan-dim: rgba(0, 255, 255, 0.2);
+				--orange: #ff5e00;
+				--magenta: #ff00ff;
+				--violet: #8e44ad;
+				--green: #00ff88;
+				--panel-bg: #1a1a2e;
+				--panel-border: rgba(255, 255, 255, 0.1);
+				--text-main: #eee;
+				--text-sub: #bbb;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				background: #121212;
+				color: var(--text-main);
+				font-family: 'Orbitron', sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+			h1 {
+				text-align: center;
+				margin: 20px 0 10px;
+				color: #fff;
+				text-shadow: 0 0 10px var(--cyan);
+				font-size: clamp(1.6rem, 2vw, 2rem);
+			}
+			p.subtitle {
+				text-align: center;
+				margin: 0 0 20px;
+				color: var(--text-sub);
+				font-size: 0.9rem;
+			}
+			.main-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+				gap: clamp(16px, 2vw, 30px);
+				padding: 0 10px 40px;
+				max-width: 1600px;
+				margin: auto;
+			}
+			.video-container {
+				position: relative;
+				width: 640px;
+				max-width: 90vw;
+				aspect-ratio: 4/3;
+				border: 3px solid var(--cyan);
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow:
+					0 0 20px var(--cyan),
+					0 0 40px var(--cyan-dim);
+			}
+			video,
+			#overlay {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			#overlay {
+				pointer-events: none;
+				z-index: 2;
+			}
+			.metrics-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: clamp(16px, 2vw, 20px);
+				flex: 1;
+				max-width: 1000px;
+			}
+			.card {
+				background: var(--panel-bg);
+				border-radius: 15px;
+				padding: 15px;
+				border: 1px solid var(--panel-border);
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+			}
+			.card h3 {
+				margin: 0;
+				text-align: center;
+				color: var(--cyan);
+				font-size: 1.1rem;
+				text-shadow: 0 0 5px var(--cyan-dim);
+			}
+			.metric-value {
+				text-align: center;
+				font-size: 2em;
+				margin: 5px 0;
+				color: var(--cyan);
+			}
+			.metric-value.small {
+				font-size: 1.4em;
+			}
+			.card canvas {
+				margin-top: 10px;
+				width: 100% !important;
+				height: 200px !important;
+			}
+			/* Responsive tweak: stack video under metrics on narrow screens */
+			@media (max-width: 900px) {
+				.main-container {
+					flex-direction: column-reverse;
+					align-items: center;
+				}
+				.metrics-container {
+					max-width: 640px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Webcam Face Tracking &amp; Ocular Metrics</h1>
+		<p class="subtitle">
+			Allow camera access to begin. All video &amp; computation stays local in your browser.
+		</p>
+
+		<div class="main-container">
+			<!-- VIDEO / OVERLAY -->
+			<div class="video-container">
+				<video id="input_video" autoplay playsinline muted></video>
+				<canvas id="overlay"></canvas>
+			</div>
+
+			<!-- METRICS + CHARTS -->
+			<div class="metrics-container">
+				<div class="card">
+					<h3>Blink Rate</h3>
+					<p id="valBlink" class="metric-value">--</p>
+					<canvas id="chartBlink"></canvas>
+				</div>
+				<div class="card">
+					<h3>Eye Strain</h3>
+					<p id="valStrain" class="metric-value small">--</p>
+					<canvas id="chartStrain"></canvas>
+				</div>
+				<div class="card">
+					<h3>Tiredness (PERCLOS)</h3>
+					<p id="valTired" class="metric-value small">--</p>
+					<canvas id="chartTired"></canvas>
+				</div>
+				<div class="card">
+					<h3>Attention</h3>
+					<p id="valAttention" class="metric-value small">--</p>
+					<canvas id="chartAttention"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/* -------------------------------------------------
+   ELEMENTS
+-------------------------------------------------- */
+			const videoEl = document.getElementById('input_video');
+			const overlayEl = document.getElementById('overlay');
+			const octx = overlayEl.getContext('2d');
+
+			const valBlinkEl = document.getElementById('valBlink');
+			const valStrainEl = document.getElementById('valStrain');
+			const valTiredEl = document.getElementById('valTired');
+			const valAttentionEl = document.getElementById('valAttention');
+
+			/* -------------------------------------------------
+   METRIC ACCUMULATORS (per 3s interval)
+-------------------------------------------------- */
+			let blinkCount = 0;
+			let totalFrames = 0;
+			let closedFrames = 0;
+			let facePresentFrames = 0;
+			let prevEyesClosed = false;
+
+			/* -------------------------------------------------
+   CHART SETUP (rolling history)
+-------------------------------------------------- */
+			const MAX_POINTS = 20;
+			function makeGradient(ctx, c1, c2) {
+				const g = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+				g.addColorStop(0, c1);
+				g.addColorStop(1, c2);
+				return g;
+			}
+			function trimSeries(chart) {
+				if (chart.data.labels.length > MAX_POINTS) {
+					chart.data.labels.shift();
+					chart.data.datasets[0].data.shift();
+				}
+			}
+			function pushAndUpdate(chart, label, val) {
+				chart.data.labels.push(label);
+				chart.data.datasets[0].data.push(val);
+				trimSeries(chart);
+				chart.update();
+			}
+
+			/* Common chart options */
+			const commonOpts = {
+				responsive: true,
+				maintainAspectRatio: false,
+				animation: { duration: 600, easing: 'easeOutQuart' },
+				plugins: { legend: { display: false } },
+				scales: {
+					x: { display: false },
+					y: {
+						beginAtZero: true,
+						ticks: { color: '#eee' },
+						grid: { color: 'rgba(255,255,255,.1)' },
+					},
+				},
+			};
+
+			/* Blink Rate chart (blinks/min) */
+			const blinkCtx = document.getElementById('chartBlink').getContext('2d');
+			const blinkChart = new Chart(blinkCtx, {
+				type: 'line',
+				data: {
+					labels: [],
+					datasets: [
+						{
+							data: [],
+							borderColor: '#00ffff',
+							backgroundColor: makeGradient(
+								blinkCtx,
+								'rgba(0,255,255,.4)',
+								'rgba(0,255,255,0)'
+							),
+							tension: 0.4,
+							pointRadius: 3,
+							pointBackgroundColor: '#fff',
+						},
+					],
+				},
+				options: Object.assign({}, commonOpts, {
+					scales: {
+						x: commonOpts.scales.x,
+						y: Object.assign({}, commonOpts.scales.y, {
+							title: {
+								display: true,
+								text: 'blinks/min',
+								color: '#eee',
+								font: { size: 12 },
+							},
+						}),
+					},
+				}),
+			});
+
+			/* Eye Strain chart (0=Low 1=Mod 2=High) */
+			const strainCtx = document.getElementById('chartStrain').getContext('2d');
+			const strainChart = new Chart(strainCtx, {
+				type: 'line',
+				data: {
+					labels: [],
+					datasets: [
+						{
+							data: [],
+							borderColor: '#ff5e00',
+							backgroundColor: makeGradient(
+								strainCtx,
+								'rgba(255,94,0,.4)',
+								'rgba(255,94,0,0)'
+							),
+							tension: 0.4,
+							pointRadius: 3,
+							pointBackgroundColor: '#fff',
+						},
+					],
+				},
+				options: Object.assign({}, commonOpts, {
+					scales: {
+						x: commonOpts.scales.x,
+						y: {
+							beginAtZero: true,
+							min: 0,
+							max: 2, // categorical
+							ticks: {
+								color: '#eee',
+								callback: (v) => ({ 0: 'Low', 1: 'Mod', 2: 'High' })[v] ?? '',
+							},
+							grid: { color: 'rgba(255,255,255,.1)' },
+						},
+					},
+				}),
+			});
+
+			/* Tiredness chart (PERCLOS %) */
+			const tiredCtx = document.getElementById('chartTired').getContext('2d');
+			const tiredChart = new Chart(tiredCtx, {
+				type: 'line',
+				data: {
+					labels: [],
+					datasets: [
+						{
+							data: [],
+							borderColor: '#8e44ad',
+							backgroundColor: makeGradient(
+								tiredCtx,
+								'rgba(142,68,173,.4)',
+								'rgba(142,68,173,0)'
+							),
+							tension: 0.4,
+							pointRadius: 3,
+							pointBackgroundColor: '#fff',
+						},
+					],
+				},
+				options: Object.assign({}, commonOpts, {
+					scales: {
+						x: commonOpts.scales.x,
+						y: Object.assign({}, commonOpts.scales.y, {
+							title: { display: true, text: '%', color: '#eee', font: { size: 12 } },
+							min: 0,
+							max: 100,
+						}),
+					},
+				}),
+			});
+
+			/* Attention chart (0/1) */
+			const attCtx = document.getElementById('chartAttention').getContext('2d');
+			const attentionChart = new Chart(attCtx, {
+				type: 'line',
+				data: {
+					labels: [],
+					datasets: [
+						{
+							data: [],
+							borderColor: '#00ff88',
+							backgroundColor: makeGradient(
+								attCtx,
+								'rgba(0,255,136,.4)',
+								'rgba(0,255,136,0)'
+							),
+							tension: 0.4,
+							pointRadius: 3,
+							pointBackgroundColor: '#fff',
+						},
+					],
+				},
+				options: Object.assign({}, commonOpts, {
+					scales: {
+						x: commonOpts.scales.x,
+						y: {
+							beginAtZero: true,
+							min: 0,
+							max: 1,
+							ticks: {
+								color: '#eee',
+								callback: (v) => ({ 0: 'No', 1: 'Yes' })[v] ?? '',
+							},
+							grid: { color: 'rgba(255,255,255,.1)' },
+						},
+					},
+				}),
+			});
+
+			/* -------------------------------------------------
+   MEDIAPIPE FACEMESH SETUP
+-------------------------------------------------- */
+			const faceMesh = new FaceMesh({
+				locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`,
+			});
+			faceMesh.setOptions({
+				maxNumFaces: 1,
+				refineLandmarks: true,
+				minDetectionConfidence: 0.5,
+				minTrackingConfidence: 0.5,
+			});
+			faceMesh.onResults(onResults);
+
+			/* Use MediaPipe Camera util to drive frames */
+			const mpCamera = new Camera(videoEl, {
+				onFrame: async () => {
+					await faceMesh.send({ image: videoEl });
+				},
+				width: 640,
+				height: 480,
+			});
+			mpCamera.start().catch((err) => {
+				console.error('Camera start error:', err);
+				alert('Camera access failed. Please allow camera in browser settings.');
+			});
+
+			/* -------------------------------------------------
+   FRAME CALLBACK
+-------------------------------------------------- */
+			function onResults(results) {
+				totalFrames++;
+
+				// Resize overlay to match actual image (once)
+				if (
+					overlayEl.width !== results.image.width ||
+					overlayEl.height !== results.image.height
+				) {
+					overlayEl.width = results.image.width;
+					overlayEl.height = results.image.height;
+				}
+
+				// Clear overlay
+				octx.save();
+				octx.clearRect(0, 0, overlayEl.width, overlayEl.height);
+
+				if (results.multiFaceLandmarks && results.multiFaceLandmarks.length > 0) {
+					const lm = results.multiFaceLandmarks[0];
+					facePresentFrames++;
+
+					// draw mesh
+					drawConnectors(octx, lm, FACEMESH_TESSELATION, {
+						color: '#C0C0C070',
+						lineWidth: 1,
+					});
+					drawConnectors(octx, lm, FACEMESH_LEFT_EYE, { color: '#FF3030' });
+					drawConnectors(octx, lm, FACEMESH_RIGHT_EYE, { color: '#FF3030' });
+					drawConnectors(octx, lm, FACEMESH_LEFT_IRIS, { color: '#00ff88' });
+					drawConnectors(octx, lm, FACEMESH_RIGHT_IRIS, { color: '#00ff88' });
+
+					// Dist helper (normalized coordinates)
+
+					const dist = (i, j) => {
+						const dx = lm[i].x - lm[j].x;
+						const dy = lm[i].y - lm[j].y;
+						return Math.hypot(dx, dy);
+					};
+
+					// Use your proven blinkRatio method
+					const leftRatio = dist(33, 133) / dist(159, 145); // horiz / vert
+					const rightRatio = dist(362, 263) / dist(386, 374);
+					const blinkRatio = (leftRatio + rightRatio) / 2;
+
+					const eyesClosed = blinkRatio > 5.0; // tuned threshold
+
+					if (eyesClosed && !prevEyesClosed) {
+						blinkCount++;
+					}
+					if (eyesClosed) {
+						closedFrames++;
+					}
+					prevEyesClosed = eyesClosed;
+				} else {
+					// no face
+					prevEyesClosed = false;
+				}
+
+				octx.restore();
+			}
+
+			/* -------------------------------------------------
+   INTERVAL METRIC UPDATE (every 3s)
+-------------------------------------------------- */
+			setInterval(() => {
+				const timestamp = new Date().toLocaleTimeString();
+
+				// Blink Rate (per min) from last 3s window
+				const blinkRate = blinkCount * 20; // 60 / 3 = 20
+				const perclos = totalFrames > 0 ? (closedFrames / totalFrames) * 100 : 0;
+				const attentionFrac = totalFrames > 0 ? facePresentFrames / totalFrames : 0;
+
+				// Eye Strain text from blinkRate
+				const strainLevelIdx = blinkRate < 10 ? 2 : blinkRate < 15 ? 1 : 0;
+				const strainText = ['Low', 'Moderate', 'High'][strainLevelIdx];
+
+				// Tiredness text from PERCLOS
+				const tiredText =
+					perclos > 40
+						? 'Very High'
+						: perclos > 20
+							? 'High'
+							: perclos > 5
+								? 'Moderate'
+								: 'Low';
+
+				// Attention binary for chart
+				const attBinary = attentionFrac >= 0.5 ? 1 : 0;
+
+				// ---- Update text UI ----
+				valBlinkEl.textContent = blinkRate.toFixed(1);
+				valStrainEl.textContent = strainText;
+				valTiredEl.textContent = `${tiredText} (${perclos.toFixed(1)}%)`;
+				valAttentionEl.textContent = attBinary ? 'Yes' : 'No';
+
+				// ---- Update charts ----
+				pushAndUpdate(blinkChart, timestamp, blinkRate);
+				pushAndUpdate(strainChart, timestamp, strainLevelIdx);
+				pushAndUpdate(tiredChart, timestamp, perclos);
+				pushAndUpdate(attentionChart, timestamp, attBinary);
+
+				// reset accumulators
+				blinkCount = 0;
+				totalFrames = 0;
+				closedFrames = 0;
+				facePresentFrames = 0;
+				// note: prevEyesClosed persists so we don't miscount across boundary
+			}, 3000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+.container {
+	width: 100%;
+	height: auto;
+	background: var(--cardBackground);
+	border-radius: 20px;
+	padding: 1.25rem;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+}
+.chartSection {
+	height: 6rem;
+	width: 8rem;
+}
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.title {
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--metricValue);
+}
+.subtitle {
+	font-size: 15px;
+	font-weight: 400;
+	padding-bottom: 1px;
+	color: var(--metricValue);
+}
+.link {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--metricValue);
+	cursor: pointer;
+  text-decoration: underline;
+}
+.link:hover {
+    text-decoration: none;
+  }
+
+@media (max-width: 460px) {
+	.container {
+		padding: 1rem;
+	}
+	.title {
+		font-size: 16px;
+	}
+	.subtitle {
+		font-size: 11px;
+	}
+  .link {
+     font-size: 11px;
+  }
+}

@@ -1,0 +1,81 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 10px;
+	color: hsl(var(--foreground));
+}
+
+.errorBanner {
+	background-color: hsl(var(--destructive) / 0.1);
+	color: hsl(var(--destructive));
+	padding: 1rem;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+	border-left: 4px solid hsl(var(--destructive));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.retryButton {
+	padding: 0.5rem 1rem;
+	background-color: var(--metricValue);
+	color: var(--cardBackground);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+	background-color: var(--lightMetricValue);
+}
+
+.streamSection {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.metricsPanel {
+	padding: 1.5rem;
+	background-color: hsl(var(--card));
+	border: 1px solid hsl(var(--border));
+	border-radius: 12px;
+}
+
+.articlesSection {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+	.articlesSection {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		gap: 1.25rem;
+	}
+	.sectionHeading {
+		flex-direction: column;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 480px) {
+	.metricsPanel {
+		padding: 0.5rem;
+	}
+}

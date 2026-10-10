@@ -1,0 +1,70 @@
+
+.iconButton {	
+	display: flex;
+	padding: 11px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	margin: 5px;
+	background: var(--cardBackground);
+	cursor: pointer;
+}
+.icon{
+    width: 22px;
+    height: 22px;
+}
+
+.dropdownHeader {
+	padding: 8px;
+	border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.dropdownTitle {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--metricValue);
+}
+
+.languageItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.languageText{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+
+.flag {
+	font-size: 18px;
+	line-height: 1;
+    align-items: center;
+}
+
+
+.nativeName {
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--text-color, #374151);
+}
+
+.englishName {
+	font-size: 12px;
+	color: var(--text-muted, #6b7280);
+}
+
+.checkIcon {
+	color: var(--subtleMetricValue);
+    align-self: center;
+}
+
+
+@media (max-width: 480px) {
+   .iconButton{
+    display: none;
+   } 
+}

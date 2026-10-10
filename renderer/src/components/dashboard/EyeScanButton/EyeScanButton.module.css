@@ -1,0 +1,127 @@
+.scanButton {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	padding: 20px;
+	background: var(--cardBackground);
+	border: 1px solid var(--lightText);
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: var(--metricValue);
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.scanButton:hover {
+	border-color: var(--lowValue);
+	background: var(--subtleCardBackground);
+	transform: translateY(-2px);
+}
+
+
+
+.iconContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	background:  var(--lowValue);
+	border-radius: 12px;
+	color: white;
+	flex-shrink: 0;
+}
+
+.eyeIcon {
+	z-index: 2;
+}
+
+.scanIcon {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	background: rgba(255, 255, 255, 0.9);
+	color: var(--lowValue);
+	border-radius: 50%;
+	padding: 2px;
+	z-index: 3;
+}
+
+.textContainer {
+	flex: 1;
+	min-width: 0;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 0 4px 0;
+	color: var(--metricValue);
+}
+
+.subtitle {
+	font-size: 14px;
+	color: var(--lightText);
+	margin: 0;
+}
+
+.arrow {
+	font-size: 20px;
+	color: var(--lightText);
+	transition: transform 0.3s ease;
+	flex-shrink: 0;
+}
+
+.scanButton:hover .arrow {
+	transform: translateX(4px);
+	color: var(--lowValue);
+}
+
+/* Add a subtle pulse animation to the icon */
+@keyframes subtlePulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.scanButton:hover .iconContainer {
+	animation: subtlePulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.scanButton {
+		padding: 16px;
+		gap: 12px;
+	}
+	
+	.iconContainer {
+		width: 48px;
+		height: 48px;
+	}
+	
+	.eyeIcon {
+		width: 20px;
+		height: 20px;
+	}
+	
+	.scanIcon {
+		width: 14px;
+		height: 14px;
+	}
+	
+	.title {
+		font-size: 16px;
+	}
+	
+	.subtitle {
+		font-size: 13px;
+	}
+}

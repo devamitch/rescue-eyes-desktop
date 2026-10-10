@@ -1,0 +1,151 @@
+.videoContainer {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 640px;
+  height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 16px auto;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.exerciseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.metricsContainer {
+  padding: 14px;
+}
+.comparisonTitle {
+  color: var(--metricValue);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.comparisonGrid {
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricsSection {
+  padding: 10px;
+}
+
+.metricsTitle {
+  color: var(--metricValue);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.metricsGrid {
+   display:flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.metricItem {
+  background: var(--cardBackground);
+  padding: 16px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.metricLabel {
+  display: block;
+  color: var(--metricValue);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.metricValue {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.low {
+  color: var(--lowValue);
+}
+
+.moderate {
+  color: var(--modValue);
+}
+
+.high {
+  color: var(--highValue);
+}
+
+.veryHigh {
+  color: var(--vHighValue);
+}
+
+.normal {
+  color: var(--metricValue);
+}
+
+.good {
+  color: var(--lowValue);
+}
+
+.poor {
+  color: var(--highValue);
+}
+
+@media (max-width: 768px) {
+  
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+  .metricItem{
+    padding: 12px;
+    border-radius: 16px;
+  }
+  .metricLabel{
+    font-size: 10px;
+  }
+  .metricValue {
+    font-size: 18px;
+  }
+  .videoContainer {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (max-width: 480px) {
+  .metricItem,
+  .improvementItem {
+    padding: 8px;
+  }
+  .metricItem{
+    padding: 8px;
+    border-radius: 12px;
+  }
+  .metricLabel {
+    font-size: 8px;
+  }
+  .metricValue {
+    font-size: 12px;
+  }
+
+}

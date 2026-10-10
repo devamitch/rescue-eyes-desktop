@@ -1,0 +1,91 @@
+.root {
+	position: relative;
+	display: inline-block;
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	z-index: 40;
+}
+
+.trigger {
+	display: inline-flex;
+	align-items: center;
+}
+
+.content {
+	position: absolute;
+	top: calc(100%);
+	min-width: 220px;
+	background: var(--cardBackground);
+	border-radius: 12px;
+	padding: 8px;
+	z-index: 50;
+	box-shadow: 0px 4px 16px var(--metricValue);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+.alignEnd {
+	right: 0;
+	left: auto;
+}
+
+.alignStart {
+	left: 0;
+	right: auto;
+}
+
+.alignCenter {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.header {
+	padding: 12px 12px 8px;
+	margin-bottom: 6px;
+	color: var(--metricValue);
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 10px;
+	color: var(--metricValue);
+	text-decoration: none;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.item:hover {
+	background: var(--subtleCardBackground);
+}
+
+.danger {
+	color: var(--vHighValue);
+}
+
+@media (max-width: 768px) {
+	.alignCenter {
+		left: 50%;
+		transform: translateX(-80%);
+	}
+
+	.content {
+		min-width: 150px;
+	}
+
+	.item {
+		font-size: 14px;
+	}
+}

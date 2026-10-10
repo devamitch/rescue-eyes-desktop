@@ -1,0 +1,48 @@
+.completeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--metricValue);
+  color: var(--cardBackground);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.completeButton:hover {
+    cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.restartButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--highValue);
+  color: var(--cardBackground);
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.restartButton:hover {
+    cursor: pointer;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .completeButton,
+  .restartButton {
+    width: 100%;
+    font-size: 13px;
+
+  }
+}

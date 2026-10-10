@@ -1,0 +1,262 @@
+.card {
+	/* height: 550px; */
+	display:flex;
+	flex-grow:1;
+	width: 100%;
+	border-radius: 20px;
+	background: var(--cardBackground);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 28px;
+	padding: 1.25rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.titleSection {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.title {
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--metricValue);
+}
+
+.subtitle {
+	font-size: 13px;
+	color: var(--lightMetricValue);
+	margin: 4px 0 0;
+}
+
+.date {
+	font-size: 0.6rem;
+	color: var(--lightMetricValue);
+	align-self: center;
+}
+
+.conditionSection {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--lightMetricValue);
+	font-size: 0.8rem;
+	margin-top: 1rem;
+}
+
+.progressWrapper {
+	position: relative;
+	width: 280px;
+	height: 140px;
+	top: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	justify-self: center;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+.progressWrapper::before {
+	content: '';
+	width: 280px;
+	height: 140px;
+	background: var(--cardBackground);
+	border-radius: 300px 300px 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.progress {
+	width: 280px;
+	height: 140px;
+	background: linear-gradient(145deg, rgba(148, 171, 150, 1), rgba(148, 171, 150, 0));
+	border-radius: 0 0 300px 300px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transform: rotate(var(--progress-rotation, 0deg));
+	transform-origin: center top;
+}
+.progressWrapper::after {
+	content: '';
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 1);
+	bottom: -125px;
+}
+
+.emojiCircle {
+	position: relative;
+	z-index: 1;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: var(--lightMetricValue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.emoji {
+	font-size: 1.75rem;
+	color: var(--cardBackground);
+}
+
+.statsBox {
+	border-radius: 20px;
+	padding: 16px 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--subtleCardBackground);
+	text-align: center;
+	flex-direction: column;
+	width: 95%;
+	margin: 0 auto;
+}
+.statsValue {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0;
+	line-height: 1;
+	color: var(--metricValue);
+}
+
+.statsFooter {
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: var(--metricValue);
+	margin: 4px 0 0;
+}
+
+@media (max-width: 1024px) {
+	.card {
+		height: auto;
+		justify-content: start;
+		gap: 2.5rem;
+	}
+	.date {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.card {
+		height: auto;
+		/* min-height: 500px; */
+		padding: 1.5rem 1rem;
+		/* gap: 20px; */
+	}
+
+	.progressWrapper {
+		width: 220px;
+		height: 110px;
+	}
+
+	.progressWrapper::before {
+		width: 220px;
+		height: 110px;
+	}
+
+	.progress {
+		width: 220px;
+		height: 110px;
+	}
+
+	.progressWrapper::after {
+		width: 200px;
+		height: 200px;
+		bottom: -100px;
+	}
+
+	.statsBox {
+		width: 90%;
+		padding: 12px 4px;
+	}
+
+	.statsValue {
+		font-size: 2rem;
+	}
+
+	.statsFooter {
+		font-size: 0.7rem;
+	}
+
+	.header {
+		flex-direction: column;
+		gap: 8px;
+		align-items: flex-start;
+	}
+
+	.date {
+		align-self: flex-start;
+		font-size: 0.7rem;
+	}
+
+	.title {
+		font-size: 14px;
+	}
+
+	.subtitle {
+		font-size: 12px;
+	}
+
+	.conditionSection {
+		font-size: 0.7rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.progressWrapper {
+		width: 180px;
+		height: 90px;
+	}
+
+	.progressWrapper::before {
+		width: 180px;
+		height: 90px;
+	}
+
+	.progress {
+		width: 180px;
+		height: 90px;
+	}
+
+	.progressWrapper::after {
+		width: 160px;
+		height: 160px;
+		bottom: -80px;
+	}
+
+	.emojiCircle {
+		width: 40px;
+		height: 40px;
+	}
+
+	.emoji {
+		font-size: 1.5rem;
+	}
+
+	.statsValue {
+		font-size: 1.75rem;
+	}
+}

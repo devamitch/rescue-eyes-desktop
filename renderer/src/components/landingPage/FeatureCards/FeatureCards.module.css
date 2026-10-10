@@ -1,0 +1,71 @@
+.grid {
+	display: grid;
+	gap: 2rem;
+	margin-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.card {
+	background: var(--cardBackground);
+	color: var(--metricValue);
+	padding: 3rem;
+	border-radius: 0.75rem;
+	transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+	transform: translateY(-0.25rem);
+}
+
+.card:active {
+	transform: translateY(0);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	height: 100%;
+}
+.cardHeader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.375rem;
+	width: 100%;
+}
+.icon {
+	height: 3rem;
+	width: 3rem;
+	color: var(--cardBackground);
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	background-color: var(--lightMetricValue);
+	padding: 8px;
+}
+
+.title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 0.5rem;
+}
+
+.description {
+	color: var(--lightText);
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+@media (max-width: 680px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.card {
+		padding: 2rem;
+	}
+}

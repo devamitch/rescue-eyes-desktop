@@ -1,0 +1,374 @@
+
+.reportHistory {
+  font-family: var(--default-font-family);
+   display: flex;
+  flex-direction: column;
+ gap: 20px;
+ padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+	
+}
+.dateSelector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--border-radii);
+  color: var(--metricValue);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+ gap: 20px;
+}
+
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2px;
+  border-radius: var(--border-radii);
+}
+
+.viewButtons {
+  display: flex;
+  gap: 6px;
+  background: var(--cardBackground);
+  padding: 4px;
+  border-radius: var(--border-radii);
+}
+
+.viewButton {
+  border-radius: var(--border-radii);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--metricValue);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.viewButton.active {
+  background: var(--metricValue);
+  color: var(--cardBackground);
+}
+
+.filterBadges {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBadge {
+  padding: 10px;
+  border-radius: var(--border-radii);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--cardBackground);
+  color: var(--metricValue);
+  cursor: pointer;
+}
+
+.filterBadge.active {
+  background: var(--metricValue);
+  color: var(--cardBackground);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.chartContainer {
+  background: var(--cardBackground);
+  border-radius: var(--border-radii);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: auto;
+  justify-content: space-between;
+}
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chartHeader h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--metricValue);
+}
+
+.lastUpdate{
+  font-size: 14;
+  font-weight: 400;
+  color: var(--lightText);
+}
+
+.tableContainer {
+  background: var(--cardBackground);
+  border-radius: var(--border-radii);
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.tableContainer::-webkit-scrollbar {
+  width: 4px;
+  background: var(--subtleCardBackground);
+}
+.tableContainer::-webkit-scrollbar-thumb {
+  background: var(--lightMetricValue);
+  border-radius: 8px;
+  height: 8px;
+}
+.tableContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--metricValue);
+}
+
+.tableHeader {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: var(--cardBackground);
+  color: var(--metricValue);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tableRow {
+display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 24px;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid var(--subtleCardBackground);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.dateColumn p {
+  font-size: 14px;
+  color: var(--metricValue);
+}
+
+.dateColumn .time {
+  color: var(--lightMetricValue);
+  font-size: 12px;
+}
+
+.resultColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--border-radii);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+}
+.status.normal {
+  background: var(--lowValue);
+  color: var(--cardBackground);
+}
+
+.status.blinkrate {
+  background: var(--modValue);
+  color: var(--cardBackground);
+}
+
+.status.eyestrain {
+  background: var(--highValue);
+  color: var(--cardBackground);
+}
+
+.statusType {
+  font-size: 12px;
+  margin-top: 2px;
+  color: var(--metricValue);
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: var(--border-radii);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--metricValue);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--subtleCardBackground);
+  border: none;
+  width: fit-content;
+  justify-self: start;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--lightMetricValue);
+}
+
+.emptyState svg {
+  margin-bottom: 16px;
+  color: var(--lightMetricValue);
+}
+
+.emptyState p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.emptyState p:first-of-type {
+  font-weight: 500;
+  color: var(--lightMetricValue);
+}
+
+.customTooltip {
+  background: var(--cardBackground);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid var(--subtleCardBackground);
+}
+
+.tooltipLabel {
+  margin: 0;
+  font-weight: 600;
+  color: var(--metricValue);
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--subtleCardBackground);
+  padding-bottom: 6px;
+}
+
+.tooltipValue {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--metricValue);
+  margin: 4px 0;
+}
+
+.chart{
+  width: 100%;
+  height: 250px;
+}
+@media (max-width: 1024px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .chart{
+    width: 100%;
+    height: 200px;
+  }
+  .controlsContainer {
+    flex-direction: row;
+    gap: 8px;
+  }
+   .filterBadge{
+    font-size: 12px;
+    padding: 8px;
+   }
+   .viewButton{
+    padding: 8px;
+    font-size: 12px;
+   }
+
+  .tableHeader,
+  .tableRow {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tableHeader span:last-child,
+  .tableRow > div:last-child {
+    justify-self: start;
+  }
+  
+  .chartContainer {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dateSelector{
+    font-size: 11px;
+  }
+    .chartContainer{
+    padding: 16px;
+  }
+  .chartHeader h3{
+    font-size: 16;
+  }
+  .lastUpdate{
+    font-size: 12;
+  }
+   .controlsContainer {
+    flex-direction: row;
+    gap: 2px;
+  }
+  .viewButtons{
+    display: none;
+  }
+   .filterBadge{
+    font-size: 11px;
+    padding: 8px;
+   }
+   .tableHeader{
+    padding: 12 18;
+   }
+
+}
+@media (max-width: 340px) {
+  .chartContainer{
+    padding: 10px;
+  }
+  .chart{
+    width: 100%;
+    height: 120px;
+  }
+    .chartHeader h3{
+    font-size: 14;
+  }
+  .lastUpdate{
+    font-size: 10;
+  }
+  .filterBadge{
+    font-size: 9px;
+    padding: 4px;
+   }
+     .dateSelector{
+    font-size: 9px;
+  }
+}
+

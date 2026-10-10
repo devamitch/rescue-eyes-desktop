@@ -1,0 +1,46 @@
+---
+name: Trigger reload
+on:
+  workflow_dispatch: null
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ca-central-1
+      - name: SSH into EC2 and deploy
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          script: >
+            # 1. Stop any running instance of your app (if applicable)
+               export NVM_DIR="$HOME/.nvm"
+              [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+              [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+        
+              aws s3 cp s3://ci-cd-builds/project-eye-scan /home/ubuntu/project-eye-scan --recursive # Adjust paths
+              npm install -g pm2 || :
+              pm2 delete project-eye-scan || :
+
+            # 2. Pull the latest code from S3
+
+           
+
+            # 3. Install production dependencies on the EC2 instance (if needed)
+
+            cd /home/ubuntu/project-eye-scan
+
+            pnpm install
+
+
+            # 4. Start/Restart your application
+            
+              export PORT=${{ vars.PORT }} && pm2 start npm --name project-eye-scan -- start

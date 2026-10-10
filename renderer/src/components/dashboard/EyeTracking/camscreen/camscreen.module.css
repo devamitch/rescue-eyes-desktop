@@ -1,0 +1,212 @@
+.container {
+	position: relative;
+	width: 100%;
+	height: 30rem;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background: var(--cardBackground);
+	flex: 1;
+	overflow: hidden;
+	
+}
+
+.cameraContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--cardBackground);
+	flex:1;
+	
+}
+
+.video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scaleX(-1);
+}
+
+.canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 10;
+	pointer-events: none;
+	transform: scaleX(-1);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--cardBackground);
+	backdrop-filter: blur(24px);
+	z-index: 20;
+}
+
+.loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--metricValue);
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+}
+
+.spinner {
+	width: 48px;
+	height: 48px;
+	border: 4px solid rgba(146, 162, 156, 0.2);
+	border-top: 4px solid var(--metricValue);
+	border-radius: 50%;
+	animation: spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+	margin-bottom: 1.5rem;
+	filter: drop-shadow(0 4px 8px rgba(72, 89, 83, 0.1));
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--vHighValue);
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	padding: 0 32px;
+	letter-spacing: -0.025em;
+}
+
+.placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 3rem;
+}
+
+.placeholderContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	color: var(--metricValue);
+}
+
+.cameraIcon,
+.checkIcon {
+	color: var(--metricValue);
+}
+
+.subtext {
+	font-size: 0.875rem;
+	color: var(--lightMetricValue);
+}
+
+/* Control buttons */
+.controlButtons {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 12px;
+	z-index: 30;
+}
+
+.controlButton {
+	padding: 10px 10px;
+	border: none;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: var(--lightMetricValue);
+	color: var(--cardBackground);
+}
+ .controlButtonMobile{
+	display: none;
+ }
+
+.controlButton:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.controlButton.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.controlButton.active {
+	background: var(--cardBackground);
+	color: var(--metricValue);
+}
+
+
+@media (max-width:600px) {
+	.container{
+		height: 100%;
+		border-radius: 0px;
+	}
+	.controlButtons {
+		width: 100%;
+		bottom: 80px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.controlButtonMobile  {
+		display: flex;
+		padding: 10px 10px;
+	border: none;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: var(--cardBackground);
+	}
+	.controlButton{
+	padding: 10px 10px;
+	border: none;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: var(--cardBackground);
+	}
+	.controlButton.active {
+	background: transparent;
+	color: var(--cardBackground);
+}
+}

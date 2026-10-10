@@ -1,0 +1,129 @@
+.container {
+    background: var(--subtleCardBackground);
+    padding: 12px 60px;
+}
+
+.mainContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 60px 10px;
+}
+
+.sectionTitle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 3rem auto;
+    color: var(--metricValue);
+}
+
+.subHeading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #485953;
+    margin-bottom: 1rem;
+}
+
+.sectionDescription {
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 400;
+}
+
+.twoColumnLayout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.layoutImage {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.layoutContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.buisnessContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--cardBackground);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.infoCard {
+    background-color: var(--cardBackground);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%; 
+}
+
+.checkList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.checkListItem {
+    font-size: 1rem;
+    color: var(--lightText);
+    padding-left: 1.75rem;
+    position: relative;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.checkListItem:last-child {
+    margin-bottom: 0;
+}
+
+.checkListItem::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--lightMetricValue);
+    font-weight: bold;
+    font-size: 1.25rem;
+    top: -2px;
+}
+
+@media (max-width: 1024px) {
+    .twoColumnLayout {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .layoutImage {
+       display: none;
+    }
+    .container{
+        padding: 0px 40px;
+    }
+    .buisnessContent{
+        padding: 20px;
+    }
+    .infoCard {
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 460px) {
+    .container{
+        padding: 0px 10px;
+    }
+}

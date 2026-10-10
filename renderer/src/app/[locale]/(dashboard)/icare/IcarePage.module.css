@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    flex-direction: column;
+  }
+
+}
+
+

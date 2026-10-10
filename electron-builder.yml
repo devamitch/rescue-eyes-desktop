@@ -1,0 +1,44 @@
+appId: com.devamitch.rescueeyes
+productName: RescueEyes
+copyright: Copyright © 2025 Aura Medical Technologies Inc.
+
+directories:
+  output: dist
+  buildResources: build
+
+# Include all necessary files
+files:
+  - "**/*"
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+  - "!{.env,.env.*,.npmrc,pnpm-lock.yaml}"
+  - "!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}"
+
+# Remove extraResources if not needed
+# extraResources: []
+
+publish: null
+
+mac:
+  category: public.app-category.medical
+  target: dmg
+  icon: public/android-chrome-512x512.png
+  identity: null
+  hardenedRuntime: false
+  gatekeeperAssess: false
+
+win:
+  target: nsis
+  icon: public/fav.ico
+
+linux:
+  target: deb
+  icon: public/logo.png
+  category: Medical
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  

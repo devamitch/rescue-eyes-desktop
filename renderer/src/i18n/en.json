@@ -1,0 +1,761 @@
+{
+	"metadata": {
+		"appName": "RescueEyess",
+		"title": "RescueEyess - AI Eye Health Monitoring",
+		"titleTemplate": "%s - RescueEyess",
+		"description": "Advanced AI-powered eye wellness monitoring that keeps your team healthy, focused, and performing at their best."
+	},
+	"common": {
+		"loading": "Loading...",
+		"retry": "Retry",
+		"error": "Error:",
+		"success": "Success!",
+		"cancel": "Cancel",
+		"save": "Save",
+		"close": "Close",
+		"back": "Back",
+		"next": "Next",
+		"previous": "Previous",
+		"notAvailable": "N/A",
+		"minutes": "min",
+		"screenTime": "Screen Time",
+		"language": "Language",
+		"changeLanguage": "Change Language"
+	},
+	"pathnames": {
+		"/": "/",
+		"/dashboard": "/dashboard",
+		"/live": "/live",
+		"/icare": "/icare",
+		"/history": "/history",
+		"/settings": "/settings",
+		"/profile": "/profile",
+		"/signin": "/signin",
+		"/register": "/register",
+		"/about": "/about",
+		"/contact": "/contact",
+		"/privacy": "/privacy",
+		"/terms": "/terms",
+		"/help": "/help",
+		"/faq": "/faq",
+		"/blog": "/blog",
+		"/news": "/news",
+		"/products": "/products",
+		"/services": "/services",
+		"/pricing": "/pricing",
+		"/features": "/features",
+		"/download": "/download",
+		"/upload": "/upload",
+		"/search": "/search",
+		"/cart": "/cart",
+		"/checkout": "/checkout",
+		"/orders": "/orders",
+		"/wishlist": "/wishlist",
+		"/notifications": "/notifications",
+		"/messages": "/messages",
+		"/friends": "/friends",
+		"/groups": "/groups",
+		"/events": "/events",
+		"/calendar": "/calendar",
+		"/tasks": "/tasks",
+		"/projects": "/projects",
+		"/team": "/team",
+		"/reports": "/reports",
+		"/analytics": "/analytics",
+		"/insights": "/insights",
+		"/resources": "/resources",
+		"/tutorials": "/tutorials",
+		"/guides": "/guides",
+		"/support": "/support",
+		"/feedback": "/feedback",
+		"/reviews": "/reviews",
+		"/ratings": "/ratings",
+		"/community": "/community",
+		"/forum": "/forum",
+		"/chat": "/chat",
+		"/video": "/video",
+		"/audio": "/audio",
+		"/images": "/images",
+		"/documents": "/documents"
+	},
+	"strainLevels": {
+		"low": "Low",
+		"moderate": "Moderate",
+		"high": "High",
+		"veryHigh": "Very High",
+		"tired": "Tired",
+		"sleepy": "Sleepy",
+		"exhausted": "Exhausted"
+	},
+	"units": {
+		"blinksPerMin": "blinks/min",
+		"percentage": "%",
+		"years": "years",
+		"level": "level",
+		"bpm": "bpm",
+		"close": "close",
+		"strain": "strain",
+		"ratio": "ratio",
+		"mm": "mm",
+		"min": "min"
+	},
+	"highUsage": {
+		"title": "High Usage",
+		"description": "You have exceeded recommended usage limits",
+		"warning": "Warning: Prolonged usage may cause eye strain",
+		"recommendation": "Take a break and rest your eyes",
+		"duration": "Duration of high usage",
+		"level": "Usage intensity level"
+	},
+	"header": {
+		"logoText": "RescueEyess",
+		"signInButton": "Sign In",
+		"getStartedButton": "Get Started"
+	},
+	"hero": {
+		"heading": "RescueEyess:",
+		"highlight": "See Better. Work Smarter.",
+		"subheading": "AI-powered eye wellness that keeps your team healthy, focused, and performing at their best.",
+		"getStartedButton": "Get Started",
+		"learnMoreButton": "Learn More",
+		"imageAlt": "landing page hero image"
+	},
+	"navigation": {
+		"sidebar": {
+			"logoText": "RescueEyes",
+			"dashboard": "Dashboard",
+			"liveFeed": "Live Feed",
+			"icare": "ICare",
+			"history": "History",
+			"settings": "Settings"
+		},
+		"navbar": {
+			"searchPlaceholder": "Search...",
+			"profile": "Profile",
+			"settings": "Settings",
+			"logout": "Logout",
+			"userMenuLabel": "User menu",
+			"profileAlt": "Profile"
+		}
+	},
+	"auth": {
+		"register": {
+			"title": "Create Your Account",
+			"subtitle": "Join us to access premium eye care features",
+			"nameLabel": "Full Name",
+			"namePlaceholder": "Enter your full name",
+			"emailLabel": "Email Address",
+			"emailPlaceholder": "Enter your email",
+			"passwordLabel": "Password",
+			"passwordPlaceholder": "Create a password (min. 4 characters)",
+			"confirmPasswordLabel": "Confirm Password",
+			"confirmPasswordPlaceholder": "Confirm your password",
+			"termsCheckboxText": "I agree to the",
+			"termsLinkText": "Terms of Service",
+			"andText": "and",
+			"privacyLinkText": "Privacy Policy",
+			"loadingButtonText": "Creating Account...",
+			"submitButtonText": "Create Account",
+			"signInLinkText": "Already have an account?",
+			"signInText": "Sign In",
+			"successMessage": "Registration successful! Please check your email to verify your account.",
+			"socialDividerText": "OR Sign up with",
+			"continueWithApple": "Continue with Apple",
+			"validationErrors": {
+				"allFieldsRequired": "All fields are required.",
+				"passwordMinLength": "Password should be at least 4 characters.",
+				"passwordMismatch": "Passwords do not match.",
+				"invalidEmail": "Please enter a valid email address.",
+				"termsRequired": "You must accept the terms and conditions."
+			},
+			"firebaseErrors": {
+				"emailInUse": "This email is already registered. Please try signing in.",
+				"weakPassword": "Password should be stronger ( and at least 4 characters).",
+				"invalidEmail": "Please enter a valid email address.",
+				"operationNotAllowed": "Registration is temporarily disabled. Please try again later.",
+				"networkError": "Network error. Please check your connection and try again.",
+				"configurationError": "Firebase configuration error. Please contact support.",
+				"defaultError": "An unexpected error occurred. Please try again."
+			}
+		},
+		"login": {
+			"title": "Welcome Back",
+			"subtitle": "Sign in to access your eye care dashboard",
+			"emailLabel": "Email Address",
+			"emailPlaceholder": "Enter your email",
+			"passwordLabel": "Password",
+			"passwordPlaceholder": "Enter your password",
+			"forgotPasswordText": "Forgot your password?",
+			"signInButton": "Sign In",
+			"loadingButtonText": "Signing In...",
+			"successMessage": "Login successful! Redirecting to your dashboard...",
+			"createAccountText": "Don't have an account?",
+			"createAccountLink": "Create Account",
+			"resetTitle": "Reset Password",
+			"resetSubtitle": "Enter your email to receive a password reset link",
+			"sendResetButton": "Send Reset Link",
+			"resetLoadingText": "Sending...",
+			"backToLoginButton": "Back to Login",
+			"resetSuccessTitle": "Email Sent!",
+			"resetSuccessMessage": "Password reset email sent! Please check your inbox for instructions.",
+			"socialDividerText": "OR Login with",
+			"continueWithApple": "Continue with Apple",
+			"validationErrors": {
+				"emptyFields": "Please fill in all fields.",
+				"invalidEmail": "Please enter a valid email address."
+			},
+			"firebaseErrors": {
+				"userNotFound": "No account found with this email address. Please check your email or register for a new account.",
+				"wrongPassword": "Incorrect password. Please try again or reset your password if you've forgotten it.",
+				"invalidCredentials": "Invalid login credentials. Please check your email and password.",
+				"invalidEmailFormat": "The email address is not properly formatted. Please check for typos.",
+				"accountDisabled": "This account has been disabled. Please contact support for assistance.",
+				"tooManyAttempts": "Too many failed login attempts. Please try again later or reset your password.",
+				"networkError": "Network connection failed. Please check your internet connection and try again.",
+				"configurationError": "Firebase configuration error. Please contact support.",
+				"defaultError": "An unexpected error occurred. Please try again or contact support if the problem persists."
+			}
+		}
+	},
+	"dashboard": {
+		"eyeScanReportTitle": "Eye Scan Report",
+		"articlesTitle": "Articles",
+		"errorMessage": "Error:",
+		"retryButton": "Retry"
+	},
+	"eyeMetrics": {
+		"labels": {
+			"blinkRate": "Blink Rate",
+			"eyeClosure": "Eye Closure",
+			"eyeStrain": "Eye Strain",
+			"tiredness": "Tiredness",
+			"attentionLevel": "Attention Level",
+			"eyeAge": "Eye Age",
+			"faceAge": "Face Age",
+			"eyeAspectRatio": "Eye Aspect Ratio",
+			"pupilDilation": "Pupil Dilation",
+			"squintIntensity": "Squint Intensity",
+			"strainLevel": "Strain Level",
+			"attention": "Attention"
+		},
+		"recommendedValues": {
+			"blinkRate": "15-20 blinks/min",
+			"eyeClosure": "< 5%",
+			"eyeStrain": "Low",
+			"tiredness": "Low",
+			"attentionLevel": "> 80%",
+			"eyeAge": "Equal to real age",
+			"faceAge": "25-35 years",
+			"eyeAspectRatio": "2.5-4.0",
+			"pupilDilation": "2-8 mm",
+			"squintIntensity": "< 10%"
+		},
+		"stream": {
+			"title": "Live Eye Metrics Stream",
+			"liveIndicator": "LIVE",
+			"currentMetrics": "Current Metrics",
+			"placeholder": "No data yet. Start tracking to see real-time metrics."
+		},
+		"attentionStates": {
+			"good": "Good",
+			"poor": "Poor"
+		},
+		"strainLevels": {
+			"low": "Low",
+			"moderate": "Moderate",
+			"high": "High"
+		}
+	},
+	"reports": {
+		"card": {
+			"title": "Overall Eye Health",
+			"subtitle": "Confidence Average:",
+			"statsFooter": "Based on recent scan & habits"
+		},
+		"conditions": {
+			"high": "Eye strain detected - Take a break",
+			"moderate": "Moderate eye strain - Consider breaks",
+			"normal": "No conditions detected"
+		},
+		"statusLabels": {
+			"normal": "Normal",
+			"blinkRate": "Slightly Low Blink Rate",
+			"eyeStrain": "Eye Strain Detected"
+		},
+		"statusTypes": {
+			"blinkRate": "Blink Rate",
+			"eyeStrain": "Eye Strain"
+		},
+		"normalRanges": {
+			"blinkRate": "Normal range: 15-20 blinks/min",
+			"perclose": "Percentage of eyelid closure"
+		},
+		"page": {
+			"reportNotFound": "Report Not Found",
+			"reportNotFoundDesc": "The requested report could not be found.",
+			"backToHistory": "← Back to History",
+			"eyeScanReport": "Eye Scan Report",
+			"overallStatus": "Overall Status"
+		}
+	},
+	"history": {
+		"title": "History & Reports",
+		"subtitle": "Review your scan and manage your eyes health records",
+		"viewingData": "Viewing data for:",
+		"today": "Today",
+		"eyeCareReport": "Eye Care Report",
+		"monthlyReport": "Monthly Eye Health Report",
+		"annualReport": "Annual Eye Health Report",
+		"allRecordsSecure": "All records are securely encrypted",
+		"exportAllData": "Export all Data",
+		"timeFilters": {
+			"today": "Today",
+			"week": "This Week",
+			"month": "This Month",
+			"year": "This Year"
+		},
+		"viewModes": {
+			"chartView": "Chart View",
+			"tableView": "Table View",
+			"chart": "Chart",
+			"table": "Table"
+		},
+		"actions": {
+			"quickView": "Quick View",
+			"viewReport": "View Report"
+		},
+		"tableHeaders": {
+			"date": "Date",
+			"results": "Results",
+			"actions": "Actions"
+		},
+		"emptyState": {
+			"noHistory": "No scan history found for",
+			"selectedDate": "selected date",
+			"startTracking": "Start tracking on the dashboard to see your history here"
+		},
+		"chartTitles": {
+			"blinkRate": "Blink Rate",
+			"eyeClosure": "Eye Closure",
+			"attention": "Attention",
+			"strainLevel": "Strain Level"
+		},
+		"lastUpdate": "Last updated: Just now"
+	},
+	"live": {
+		"errorRetry": "Retry",
+		"loadingStates": {
+			"startingTracking": "Starting tracking...",
+			"initializingCamera": "Initializing camera..."
+		}
+	},
+	"icare": {
+		"sectionTitles": {
+			"eyeExercises": "Eye Exercises",
+			"eyeProducts": "Eye Products",
+			"eyeSpecialists": "Eye Specialists"
+		},
+		"exerciseModal": {
+			"comparisonTitle": "Exercise Results Comparison",
+			"buttons": {
+				"markComplete": "Mark Exercise Complete",
+				"restart": "Restart Exercise"
+			}
+		},
+		"hospitalModal": {
+			"actionButtons": {
+				"website": "Website",
+				"directions": "Directions",
+				"reviews": "Reviews"
+			},
+			"detailLabels": {
+				"address": "Address:",
+				"getThere": "Get there:",
+				"hours": "Hours:"
+			}
+		},
+		"productModal": {
+			"aboutProduct": "About this product",
+			"buyNow": "Buy Now on Amazon"
+		}
+	},
+	"profile": {
+		"sectionTitles": {
+			"recentEyeScan": "Recent Eye Scan",
+			"scanHistory": "Scan History",
+			"personalisedAdvice": "Personalised Advice"
+		},
+		"recentScan": {
+			"title": "Eye Scan Report History",
+			"confidenceLabel": "Confidence Average:",
+			"viewFullReport": "View Full Report"
+		},
+		"scanHistory": {
+			"title": "Eye Scan Report History",
+			"description": "Past eye scan results and track changes"
+		},
+		"profileCard": {
+			"ctaButton": "Let's check your Eye Health"
+		}
+	},
+	"settings": {
+		"sectionTitles": {
+			"accountSettings": "Account Settings",
+			"aiScanSettings": "AI Scan Settings",
+			"discoveryPreferences": "Discovery Preferences",
+			"notification": "Notification",
+			"privacyData": "Privacy & Data",
+			"helpSupport": "Help & Support"
+		},
+		"accountSettings": {
+			"profileInfo": "profile Information",
+			"changePassword": "Change Password"
+		},
+		"discoveryPreferences": {
+			"specialistRegion": "Specialist Region",
+			"productCategories": "Product Categories"
+		},
+		"aiScanSettings": {
+			"autoSaveScanHistory": "Auto-Save Scan History",
+			"autoShareScans": "Auto-Share Scans",
+			"predictionSensitivity": "Prediction Sensitivity"
+		},
+		"notifications": {
+			"healthScanReport": "Health Scan Report",
+			"newProductArticles": "New Product & Articles"
+		},
+		"privacyData": {
+			"appPermission": "App Permission",
+			"downloadMyData": "Download My Data",
+			"deleteMyData": "Delete My Data"
+		},
+		"helpSupport": {
+			"faq": "FAQ",
+			"contactUs": "Contact Us",
+			"termsPrivacy": "Term & privacy Policy"
+		},
+		"logOut": "Log Out"
+	},
+	"homepage": {
+		"workCard": {
+			"headerTitle": "Trust & Proof",
+			"steps": [
+				{
+					"number": "1",
+					"title": "Science-Driven Reliability",
+					"description": "Applies clinically validated eye strain indicators grounded in peer-reviewed research for accuracy and inclusivity."
+				},
+				{
+					"number": "2",
+					"title": "Built by Medical & AI Experts",
+					"description": "Developed by medical and AI/ML engineers with extensive experience in digital health and workplace wellness."
+				},
+				{
+					"number": "3",
+					"title": "Enterprise-Grade Privacy",
+					"description": "All eye data processed locally. No video or personal visuals stored or transmitted. Only encrypted, aggregated metrics shared."
+				}
+			],
+			"buttonText": "Start Your Eye Health Journey"
+		},
+		"sections": {
+			"whyEyeHealthSection": {
+				"title": "Why Eye Health Matters at Work",
+				"imageAlt": "A person working comfortably at a well-lit desk",
+				"problemSubheading": "The Problem",
+				"impactSubheading": "The Impact"
+			},
+			"featuresSection": {
+				"title": "What RescueEyess Does"
+			},
+			"organizationBenefitsSection": {
+				"title": "Benefits for Organizations"
+			},
+			"builtForBusinessSection": {
+				"title": "Built for Business",
+				"imageAlt": "Desktop computer showing an analytics dashboard"
+			},
+			"whoWeWorkWithSection": {
+				"title": "Who We Work With"
+			},
+			"corporateWellnessSection": {
+				"title": "Corporate Wellness ROI",
+				"beforeSubheading": "Before RescueEyess:",
+				"afterSubheading": "After RescueEyess:"
+			}
+		}
+	},
+	"footer": {
+		"copyright": "Made with care by AuraCore",
+		"termsText": "Terms & Conditions",
+		"privacyText": "Privacy Policy",
+		"cookiesText": "Cookies Policy"
+	},
+	"data": {
+		"articles": [
+			{
+				"title": "Signs You Need an Eye Checkup",
+				"description": "Regular eye exams are important for maintaining eye health.",
+				"image": "/mockData/eye.jpg"
+			},
+			{
+				"title": "How to prevent digital eye strain",
+				"description": "Learn how to prevent digital eye strain from screens.",
+				"image": "/mockData/eye2.jpg"
+			},
+			{
+				"title": "How to prevent digital eyestrain",
+				"description": "Tips for keeping your eyes healthy every day.",
+				"image": "/mockData/eye3.jpg"
+			}
+		],
+		"exercises": [
+			{
+				"title": "1 Minute eye strain relief",
+				"image": "/mockData/exercise.png",
+				"youtubeUrl": "https://www.youtube.com/embed/RoIYAoAalmI?autoplay=1",
+				"description": "Learn natural techniques to relieve eye strain and improve your eye health."
+			},
+			{
+				"title": "Eye exercise to improve eyesight",
+				"image": "/mockData/exercise2.png",
+				"youtubeUrl": "https://www.youtube.com/embed/UMS0QJ_aefY?autoplay=1",
+				"description": "Master the 20-20-20 rule to give your eyes regular breaks from screen time."
+			},
+			{
+				"title": "Eye exercise to improve vision",
+				"image": "/mockData/exercise3.png",
+				"youtubeUrl": "https://www.youtube.com/embed/mqXR8O2VJLo/autoplay=1",
+				"description": "Improve your blinking patterns and eye moisture with these exercises."
+			}
+		],
+		"hospitals": [
+			{
+				"title": "Visionmax Eye Centre",
+				"description": "Dr. Daniel Senekal - Laser Vision Correction & Dry Eye Treatment",
+				"image": "https://thfvnext.bing.com/th/id/OLC.680As1HhiIWWoA480x360?w=334&h=200&c=8&rs=1&qlt=90&o=6&cdv=1&dpr=1.3&pid=Local&ucfimg=1",
+				"address": "575 100 St SW Suite 102, Edmonton, AB T6X 0S8, Canada",
+				"phone": "+1 780-452-4111",
+				"website": "https://www.visionmaxeye.com",
+				"hours": "Mon-Thu: 8:00 AM – 4:00 PM, Fri: 8:00 AM – 2:00 PM",
+				"rating": "4.7 (355 Google reviews)",
+				"additionalImages": ["/mockData/hospital.jpg", "/mockData/loc1.png"]
+			},
+			{
+				"title": "Stellar Integrated Eye Care Clinic",
+				"description": "Dr. Miral Mehta - Comprehensive Eye Care & Pediatric Eye Care",
+				"image": "https://stellareyecare.ca/wp-content/uploads/2021/05/glaucoma_before.jpg",
+				"address": "6413 Cartmell Pl SW #203, Edmonton, AB T6W 4V4, Canada",
+				"phone": "+1 780-652-2033",
+				"website": "https://stellareyecare.ca",
+				"hours": "Mon-Fri: 7:30 AM – 4:30 PM",
+				"rating": "4.6 (287 Google reviews)",
+				"additionalImages": ["/mockData/hospital2.jpg", "/mockData/loc2.png"]
+			},
+			{
+				"title": "Alberta Retina Consultants",
+				"description": "Dr. Parampal Grewal - Comprehensive Eye Care & Hereditary Eye Disease",
+				"image": "https://thfvnext.bing.com/th/id/OIP.FgBy9PzUWldw6UW6IUBR-gAAAA?w=175&h=180&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+				"address": "10924 107 Ave NW Unit 400, Edmonton, AB T5H 0X5, Canada",
+				"phone": "+1 780-448-1801",
+				"website": "https://www.alberta-retina.com",
+				"hours": "Mon-Fri: 7:30 AM – 4:30 PM",
+				"rating": "4.5 (192 Google reviews)",
+				"additionalImages": ["/mockData/hospital3.jpg", "/mockData/loc3.png"]
+			},
+			{
+				"title": "King LASIK",
+				"description": "Dr. Mahta Rasouli - LASIK Surgery & PRK Specialist",
+				"image": "https://www.kinglasik.com/wp-content/uploads/2023/11/convenient-locations-kl.jpg",
+				"address": "10430 61 Ave NW #101, Edmonton, AB T6H 2J3, Canada",
+				"phone": "+1 855-308-3937",
+				"website": "https://www.kinglasik.ca",
+				"hours": "Mon-Fri: 8:30 AM – 4:30 PM",
+				"rating": "4.8 (421 Google reviews)",
+				"additionalImages": ["/mockData/hospital4.jpg", "/mockData/loc4.png"]
+			}
+		],
+		"products": [
+			{
+				"key": "1",
+				"title": "Systane Ultra Lubricant Eye Drops",
+				"description": "Long-lasting dry eye relief",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.shld.net%2Frpx%2Fi%2Fs%2Fi%2Fspin%2Fimage%2Fspin_prod_ec_798652201%3F%3Fhei%3D64%26wid%3D64%26qlt%3D50&f=1&nofb=1&ipt=6336610cd7eccb506ffafe8a65be941c7a998f5b2310cd14d0496fc99d0a08cc",
+				"amazonUrl": "https://a.co/d/bg4ZmV4",
+				"detailedDescription": "Systane Ultra provides long-lasting relief for dry eyes with extended protection. This preservative-free formula helps restore the natural tear film and provides comfort for up to 12 hours. Perfect for computer users and those experiencing digital eye strain."
+			},
+			{
+				"key": "2",
+				"title": "Blue Light Blocking Glasses",
+				"description": "Computer glasses for eye strain relief",
+				"image": "https://www.bing.com/th?id=OPAC.AoK52YLTOlcjVA474C474&o=5&pid=21.1&w=140&h=140&rs=1&qlt=100&dpr=1.3&o=2",
+				"amazonUrl": "https://a.co/d/fM3ZNde",
+				"detailedDescription": "Professional blue light blocking glasses designed to reduce eye strain, headaches, and improve sleep quality. Features anti-glare coating and UV protection. Ideal for extended computer use and gaming sessions."
+			},
+			{
+				"key": "3",
+				"title": "TheraTears Eye Drops",
+				"description": "Advanced dry eye therapy",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F7631474b-dbeb-4a13-880f-d6b8d027ce91.c1eeb61bd5c9c95619cf00d50f8bfe52.jpeg&f=1&nofb=1&ipt=a3bb0598a16c44e149df3224d04046441ea48e25eab778606c7eda01d9194ea1",
+				"amazonUrl": "https://a.co/d/b74wgvP",
+				"detailedDescription": "TheraTears provides immediate and long-lasting relief for dry, irritated eyes. This unique electrolyte-balanced formula mimics natural tears and helps restore the eye's natural moisture balance. Safe for everyday use."
+			},
+			{
+				"key": "4",
+				"title": "Computer Monitor Light Bar",
+				"description": "Screen light to reduce eye strain",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.xXN8Hszkq_lWRXUihu6GaAHaHa%3Fpid%3DApi&f=1&ipt=bb9de08a6bfb44a20ccec3acba5bee8f78b08a201957e9b290c39e5b4f0d871b&ipo=images",
+				"amazonUrl": "https://a.co/d/1IjADOj",
+				"detailedDescription": "Professional monitor light bar that provides optimal lighting for computer work while reducing screen glare and eye strain. Features adjustable brightness and color temperature to match your work environment throughout the day."
+			},
+			{
+				"key": "5",
+				"title": "Omega-3 Eye Health Supplements",
+				"description": "Support for dry eyes and vision health",
+				"image": "https://m.media-amazon.com/images/I/71sxoUp-UvL._AC_SL1500_.jpg",
+				"amazonUrl": "https://a.co/d/eDVaXvG",
+				"detailedDescription": "Premium omega-3 supplements specifically formulated for eye health. Contains EPA and DHA to support tear production and reduce inflammation. Clinically proven to help with dry eye symptoms and overall eye health maintenance."
+			}
+		],
+		"businessFeatures": [
+			{
+				"title": "Seamless Integration",
+				"description": "Works with standard webcams on laptops and desktops."
+			},
+			{
+				"title": "Flexible Policies",
+				"description": "Align break reminders with company wellness guidelines."
+			},
+			{
+				"title": "Analytics Dashboard",
+				"description": "View real-time wellness indicators across teams."
+			},
+			{
+				"title": "Secure by Design",
+				"description": "GDPR, PIPEDA, and SOC 2 aligned."
+			}
+		],
+		"benefitsOrganisation": [
+			{
+				"title": "Boost Productivity",
+				"description": "Prevent the drop in focus and performance from tired eyes"
+			},
+			{
+				"title": "Support Wellbeing",
+				"description": "A measurable wellness initiative that improves daily comfort and engagement"
+			},
+			{
+				"title": "Lower Health Costs",
+				"description": "Prevent chronic eye strain and cut down on optometry visits and sick leave"
+			},
+			{
+				"title": "Show You Care",
+				"description": "Position your company as a proactive employer that values employee health"
+			}
+		],
+		"features": [
+			{
+				"title": "Continuous Monitoring",
+				"description": "Works in the background via existing webcams—no disruption to workflows."
+			},
+			{
+				"title": "Real-Time Analysis",
+				"description": "Uses AI to detect early signs of strain: reduced blink rate, gaze fatigue, and screen-glare impact."
+			},
+			{
+				"title": "Proactive Guidance",
+				"description": "Suggests short, tailored exercises, micro-breaks, and ergonomic adjustments—before strain impacts performance."
+			},
+			{
+				"title": "Data-Driven Insights",
+				"description": "Generates actionable reports for individuals and aggregated, anonymous insights for HR and wellness leads."
+			}
+		],
+		"whoWeWorkWith": [
+			{
+				"title": "Enterprise Offices",
+				"description": "Large teams working on screens all day."
+			},
+			{
+				"title": "Call Centers",
+				"description": "High-volume screen time, multiple shifts."
+			},
+			{
+				"title": "Tech & Creative Agencies",
+				"description": "Extended design, coding, and editing hours."
+			},
+			{
+				"title": "Remote & Hybrid Teams",
+				"description": "Wellness support wherever employees work."
+			}
+		],
+		"problemPoints": [
+			"Employees spend 6-10 hours daily in front of screens.",
+			"Digital eye strain causes headaches, fatigue, and poor focus.",
+			"Vision discomfort is a top factor in productivity loss."
+		],
+		"impactPoints": ["Higher sick days", "Lower productivity", "Increased burnout"],
+		"beforeRescueEyes": [
+			"1 in 3 employees report daily headaches or eye discomfort",
+			"Average 20-40 minutes of lost productivity per person per day"
+		],
+		"afterRescueEyes": [
+			"Reduced symptoms reported within 2 weeks",
+			"Higher engagement scores in wellness surveys",
+			"Documented reduction in sick leave related to eye strain"
+		],
+		"mockReport": {
+			"date": "16 Jun 2025, 14:37",
+			"confidenceAverage": 95,
+			"condition": "No conditions detected",
+			"percentage": 85
+		},
+		"mockReportBrief": {
+			"date": "16 Jun 2025, 14:37",
+			"confidenceAverage": 95,
+			"condition": "No conditions detected"
+		},
+		"userData": {
+			"name": "Preetham",
+			"email": "preetham123@mail.com",
+			"image": "/mockData/profile.png"
+		},
+		"reportHistory": [
+			{
+				"date": "July 17, 2025",
+				"time": "08:45 AM",
+				"result": "Normal",
+				"status": "Normal",
+				"action": "Quick View"
+			},
+			{
+				"date": "July 10, 2025",
+				"time": "08:07 AM",
+				"result": "Slightly Low Blink Rate",
+				"status": "Blink Rate",
+				"action": "View Report"
+			},
+			{
+				"date": "July 13, 2025",
+				"time": "06:45 AM",
+				"result": "Eye Strain Detected",
+				"status": "Eye Strain",
+				"action": "View Report"
+			},
+			{
+				"date": "July 10, 2025",
+				"time": "08:07 AM",
+				"result": "Slightly Low Blink Rate",
+				"status": "Blink Rate",
+				"action": "View Report"
+			},
+			{
+				"date": "July 13, 2025",
+				"time": "06:45 AM",
+				"result": "Eye Strain Detected",
+				"status": "Eye Strain",
+				"action": "View Report"
+			}
+		]
+	}
+}

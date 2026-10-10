@@ -1,0 +1,56 @@
+.card {
+	position: relative;
+	height: 240px;
+	width: 100%;
+	border-radius: 20px;
+	background: var(--cardBackground);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	padding: 1px;
+	border-radius: 1rem;
+	object-fit: cover;
+	position: absolute;
+	inset: 0;
+}
+
+.content {
+	position: relative;
+	height: 100%;
+	padding: 1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius: 20px;
+}
+
+.title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--cardBackground);
+	backdrop-filter: blur(1px);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.12) 100%, rgba(255, 255, 255, 0.05) 100%);
+	width: 100%;
+	border-radius: 10px;
+	padding: 0.75rem;
+	padding-top: 0.6rem;
+}
+
+
+@media (min-width: 1024px) {
+	.card {
+		flex: 1 1 calc(25% - 1rem);
+	}
+}
+
+@media (max-width: 600px) {
+	.card {
+		height: 200px;
+	}
+	
+.title{
+	font-size: 14px;
+}
+}

@@ -1,0 +1,318 @@
+.modalContainer {
+	border-radius: 12px;
+	width: 100%;
+	max-height: 90vh;
+	overflow-y: auto;
+	color: var(--metricValue);
+}
+
+.header {
+	padding: 24px;
+	text-align: center;
+}
+
+.headerIcon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background: var(--lowValue);
+	border-radius: 50%;
+	color: white;
+	margin-bottom: 16px;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0 0 8px 0;
+	color: var(--metricValue);
+}
+
+.subtitle {
+	font-size: 14px;
+	color: var(--lightText);
+	margin: 0;
+}
+
+.scanArea {
+	padding: 32px 24px;
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: var(--subtleCardBackground);
+	margin: 0 24px;
+	border-radius: 20px;
+}
+
+.scanPrompt {
+	text-align: center;
+}
+
+.scanIcon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+	background: var(--lowValue);
+	border-radius: 50%;
+	color: white;
+	margin-bottom: 24px;
+}
+
+.scanPrompt h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 12px 0;
+	color: var(--metricValue);
+}
+
+.scanPrompt p {
+	font-size: 14px;
+	color: var(--lightText);
+	margin: 0;
+	max-width: 300px;
+}
+
+.scanningArea {
+	text-align: center;
+}
+
+.scanningIcon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+	background: var(--lowValue);
+	border-radius: 50%;
+	color: white;
+	margin-bottom: 24px;
+}
+
+.pulsingEye {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+.scanningArea h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 16px 0;
+	color: var(--metricValue);
+}
+
+.countdown {
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--lowValue);
+	margin-bottom: 16px;
+}
+
+.progressBar {
+	width: 100%;
+	max-width: 200px;
+	height: 8px;
+	background: var(--lightText);
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.progressFill {
+	height: 100%;
+	background: var(--lowValue);
+	transition: width 0.3s ease;
+}
+
+.resultsArea {
+	width: 100%;
+}
+
+.resultsArea h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 24px 0;
+	color: var(--metricValue);
+	text-align: center;
+}
+
+.comparisonResults {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+
+.metricsSection {
+	padding: 16px;
+	background: var(--cardBackground);
+	border-radius: 8px;
+}
+
+.metricsTitle {
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 16px 0;
+	color: var(--metricValue);
+	text-align: center;
+}
+
+.metricsGrid {
+	display: grid;
+	gap: 12px;
+}
+
+.metricItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 0;
+}
+
+
+.metricLabel {
+	font-size: 14px;
+	color: var(--lightText);
+}
+
+.metricValue {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+/* Status Colors */
+.good {
+	background: var(--lowValue);
+	color: white;
+}
+
+.moderate {
+	background: var(--modValue);
+	color: white;
+}
+
+.poor {
+	background: var(--highValue);
+	color: white;
+}
+
+.high {
+	background: var(--highValue);
+	color: white;
+}
+
+.low {
+	background: var(--lowValue);
+	color: white;
+}
+
+.footer {
+	padding: 24px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+.startButton {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: var(--lowValue);
+	color: white;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.startButton:hover {
+	background: var(--metricValue);
+	transform: translateY(-1px);
+}
+
+.stopButton {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: var(--highValue);
+	color: white;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.stopButton:hover {
+	background: var(--vHighValue);
+	transform: translateY(-1px);
+}
+
+.closeButton {
+	background: var(--lightText);
+	color: white;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+	background: var(--metricValue);
+	transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.modalContainer {
+		max-width: 95vw;
+		margin: 20px;
+	}
+	
+	.comparisonResults {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	
+	.header {
+		padding: 20px;
+	}
+	
+	.scanArea {
+		padding: 24px 16px;
+		margin: 0 16px;
+	}
+	
+	.footer {
+		padding: 20px;
+		flex-direction: column;
+	}
+	
+	.startButton,
+	.stopButton,
+	.closeButton {
+		width: 100%;
+		justify-content: center;
+	}
+}

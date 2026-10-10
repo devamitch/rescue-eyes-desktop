@@ -1,0 +1,761 @@
+{
+	"metadata": {
+		"appName": "구조의 눈",
+		"title": "구조의 눈 - AI 눈 건강 모니터링",
+		"titleTemplate": "%s - 구조의 눈",
+		"description": "고급 AI 기반 눈 건강 모니터링으로 팀원들이 건강하게, 집중력 있게, 최고의 성과를 낼 수 있도록 지원합니다."
+	},
+	"common": {
+		"loading": "로딩 중...",
+		"retry": "다시 시도",
+		"error": "오류:",
+		"success": "성공!",
+		"cancel": "취소",
+		"save": "저장",
+		"close": "닫기",
+		"back": "뒤로",
+		"next": "다음",
+		"previous": "이전",
+		"notAvailable": "해당 없음",
+		"minutes": "분",
+		"screenTime": "화면 사용 시간",
+		"language": "언어",
+		"changeLanguage": "언어 변경"
+	},
+	"strainLevels": {
+		"low": "낮음",
+		"moderate": "보통",
+		"high": "높음",
+		"veryHigh": "매우 높음",
+		"tired": "피곤함",
+		"sleepy": "졸림",
+		"exhausted": "극도로 피곤함"
+	},
+	"pathnames": {
+		"/": "/",
+		"/dashboard": "/대시보드",
+		"/live": "/실시간",
+		"/icare": "/아이케어",
+		"/history": "/기록",
+		"/settings": "/설정",
+		"/profile": "/프로필",
+		"/signin": "/로그인",
+		"/register": "/가입",
+		"/about": "/소개",
+		"/contact": "/문의",
+		"/privacy": "/개인정보",
+		"/terms": "/이용약관",
+		"/help": "/도움말",
+		"/faq": "/자주묻는질문",
+		"/blog": "/블로그",
+		"/news": "/뉴스",
+		"/products": "/제품",
+		"/services": "/서비스",
+		"/pricing": "/가격",
+		"/features": "/기능",
+		"/download": "/다운로드",
+		"/upload": "/업로드",
+		"/search": "/검색",
+		"/cart": "/장바구니",
+		"/checkout": "/결제",
+		"/orders": "/주문",
+		"/wishlist": "/위시리스트",
+		"/notifications": "/알림",
+		"/messages": "/메시지",
+		"/friends": "/친구",
+		"/groups": "/그룹",
+		"/events": "/이벤트",
+		"/calendar": "/캘린더",
+		"/tasks": "/작업",
+		"/projects": "/프로젝트",
+		"/team": "/팀",
+		"/reports": "/보고서",
+		"/analytics": "/분석",
+		"/insights": "/인사이트",
+		"/resources": "/리소스",
+		"/tutorials": "/튜토리얼",
+		"/guides": "/가이드",
+		"/support": "/지원",
+		"/feedback": "/피드백",
+		"/reviews": "/리뷰",
+		"/ratings": "/평점",
+		"/community": "/커뮤니티",
+		"/forum": "/포럼",
+		"/chat": "/채팅",
+		"/video": "/비디오",
+		"/audio": "/오디오",
+		"/images": "/이미지",
+		"/documents": "/문서"
+	},
+	"highUsage": {
+		"title": "높은 사용량",
+		"description": "권장 사용 한도를 초과했습니다",
+		"warning": "경고: 장시간 사용은 눈의 피로를 유발할 수 있습니다",
+		"recommendation": "휴식을 취하고 눈을 쉬게 하세요",
+		"duration": "높은 사용량 기간",
+		"level": "사용 강도 수준"
+	},
+	"units": {
+		"blinksPerMin": "/분",
+		"percentage": "%",
+		"years": "년",
+		"level": "수준",
+		"bpm": "bpm",
+		"close": "닫기",
+		"strain": "부하",
+		"ratio": "비율",
+		"mm": "mm",
+		"min": "분"
+	},
+	"header": {
+		"logoText": "레스큐 아이즈",
+		"signInButton": "로그인",
+		"getStartedButton": "시작하기"
+	},
+	"hero": {
+		"heading": "레스큐 아이즈:",
+		"highlight": "더 잘 보고, 더 스마트하게 일하세요.",
+		"subheading": "팀을 건강하고 집중력 있게 유지하며 최고의 성과를 발휘할 수 있도록 돕는 AI 기반 눈 건강 관리.",
+		"getStartedButton": "시작하기",
+		"learnMoreButton": "자세히 보기",
+		"imageAlt": "랜딩 페이지 히어로 이미지"
+	},
+	"navigation": {
+		"sidebar": {
+			"logoText": "레스큐 아이",
+			"dashboard": "대시보드",
+			"liveFeed": "라이브 피드",
+			"icare": "아이케어",
+			"history": "기록",
+			"settings": "설정"
+		},
+		"navbar": {
+			"searchPlaceholder": "검색...",
+			"profile": "프로필",
+			"settings": "설정",
+			"logout": "로그아웃",
+			"userMenuLabel": "사용자 메뉴",
+			"profileAlt": "프로필"
+		}
+	},
+	"auth": {
+		"register": {
+			"title": "계정 만들기",
+			"subtitle": "프리미엄 눈 건강 기능에 액세스하려면 가입하세요",
+			"nameLabel": "이름",
+			"namePlaceholder": "이름을 입력하세요",
+			"emailLabel": "이메일 주소",
+			"emailPlaceholder": "이메일을 입력하세요",
+			"passwordLabel": "비밀번호",
+			"passwordPlaceholder": "비밀번호를 만드세요 (최소 4자)",
+			"confirmPasswordLabel": "비밀번호 확인",
+			"confirmPasswordPlaceholder": "비밀번호를 확인하세요",
+			"termsCheckboxText": "동의합니다",
+			"termsLinkText": "서비스 약관",
+			"andText": "및",
+			"privacyLinkText": "개인정보 보호정책",
+			"loadingButtonText": "계정 생성 중...",
+			"submitButtonText": "계정 만들기",
+			"signInLinkText": "이미 계정이 있으신가요?",
+			"signInText": "로그인",
+			"successMessage": "가입이 성공했습니다! 이메일을 확인하여 계정을 인증해 주세요.",
+			"socialDividerText": "또는 다음으로 가입",
+			"continueWithApple": "계속 사과해라",
+			"validationErrors": {
+				"allFieldsRequired": "모든 필드가 필요합니다.",
+				"passwordMinLength": "비밀번호는 최소 4자 이상이어야 합니다.",
+				"passwordMismatch": "비밀번호가 일치하지 않습니다.",
+				"invalidEmail": "유효한 이메일 주소를 입력하세요.",
+				"termsRequired": "이용 약관에 동의해야 합니다."
+			},
+			"firebaseErrors": {
+				"emailInUse": "이 이메일은 이미 등록되어 있습니다. 로그인을 시도해보세요.",
+				"weakPassword": "비밀번호를 더 강하게 만드세요 (최소 4자).",
+				"invalidEmail": "유효한 이메일 주소를 입력하세요.",
+				"operationNotAllowed": "가입이 일시적으로 비활성화되었습니다. 나중에 다시 시도하세요.",
+				"networkError": "네트워크 오류입니다. 연결을 확인하고 다시 시도하세요.",
+				"configurationError": "Firebase 구성 오류입니다. 지원팀에 문의하세요.",
+				"defaultError": "예상치 못한 오류가 발생했습니다. 다시 시도하세요."
+			}
+		},
+		"login": {
+			"title": "다시 오신 것을 환영합니다",
+			"subtitle": "눈 건강 대시보드에 액세스하려면 로그인하세요",
+			"emailLabel": "이메일 주소",
+			"emailPlaceholder": "이메일을 입력하세요",
+			"passwordLabel": "비밀번호",
+			"passwordPlaceholder": "비밀번호를 입력하세요",
+			"forgotPasswordText": "비밀번호를 잊으셨나요?",
+			"signInButton": "로그인",
+			"loadingButtonText": "로그인 중...",
+			"successMessage": "로그인 성공! 대시보드로 이동 중...",
+			"createAccountText": "계정이 없으신가요?",
+			"createAccountLink": "계정 만들기",
+			"resetTitle": "비밀번호 재설정",
+			"resetSubtitle": "비밀번호 재설정 링크를 받으려면 이메일 주소를 입력하세요",
+			"sendResetButton": "재설정 링크 전송",
+			"resetLoadingText": "전송 중...",
+			"backToLoginButton": "로그인으로 돌아가기",
+			"resetSuccessTitle": "이메일 전송 완료!",
+				"socialDividerText": "또는 다음으로 가입",
+			"continueWithApple": "계속 사과해라",
+			"resetSuccessMessage": "비밀번호 재설정 이메일을 전송했습니다! 받은편지함에서 안내를 확인하세요.",
+			"validationErrors": {
+				"emptyFields": "모든 필드를 입력하세요.",
+				"invalidEmail": "유효한 이메일 주소를 입력하세요."
+			},
+			"firebaseErrors": {
+				"userNotFound": "이 이메일 주소로 등록된 계정이 없습니다. 이메일을 확인하거나 새 계정을 등록하세요.",
+				"wrongPassword": "비밀번호가 틀렸습니다. 다시 시도하거나 비밀번호를 재설정하세요.",
+				"invalidCredentials": "잘못된 로그인 정보입니다. 이메일과 비밀번호를 확인하세요.",
+				"invalidEmailFormat": "이메일 주소 형식이 올바르지 않습니다. 오타가 있는지 확인하세요.",
+				"accountDisabled": "이 계정은 비활성화되었습니다. 지원팀에 문의하세요.",
+				"tooManyAttempts": "로그인 시도가 너무 많습니다. 잠시 후 다시 시도하거나 비밀번호를 재설정하세요.",
+				"networkError": "네트워크 연결에 실패했습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+				"configurationError": "Firebase 구성 오류입니다. 지원팀에 문의하세요.",
+				"defaultError": "예상치 못한 오류가 발생했습니다. 다시 시도하거나 문제가 지속되면 지원팀에 문의하세요."
+			}
+		}
+	},
+	"dashboard": {
+		"eyeScanReportTitle": "눈 스캔 보고서",
+		"articlesTitle": "기사",
+		"errorMessage": "오류:",
+		"retryButton": "다시 시도"
+	},
+	"eyeMetrics": {
+		"labels": {
+			"blinkRate": "눈 깜빡임 횟수",
+			"eyeClosure": "눈 감는 시간",
+			"eyeStrain": "눈의 피로",
+			"tiredness": "피로도",
+			"attentionLevel": "집중도",
+			"eyeAge": "눈 나이",
+			"faceAge": "얼굴 나이",
+			"eyeAspectRatio": "눈 종횡비",
+			"pupilDilation": "동공 확장",
+			"squintIntensity": "찌푸림 강도",
+			"strainLevel": "피로 레벨",
+			"attention": "주의력"
+		},
+		"recommendedValues": {
+			"blinkRate": "15-20회/분",
+			"eyeClosure": "< 5%",
+			"eyeStrain": "낮음",
+			"tiredness": "낮음",
+			"attentionLevel": "> 80%",
+			"eyeAge": "실제 나이와 같음",
+			"faceAge": "25-35세",
+			"eyeAspectRatio": "2.5-4.0",
+			"pupilDilation": "2-8 mm",
+			"squintIntensity": "< 10%"
+		},
+		"stream": {
+			"title": "실시간 눈 지표 스트림",
+			"liveIndicator": "실시간",
+			"currentMetrics": "현재 지표",
+			"placeholder": "아직 데이터가 없습니다. 실시간 지표를 보려면 추적을 시작하세요."
+		},
+		"attentionStates": {
+			"good": "좋음",
+			"poor": "나쁨"
+		},
+		"strainLevels": {
+			"low": "낮음",
+			"moderate": "보통",
+			"high": "높음"
+		}
+	},
+	"reports": {
+		"card": {
+			"title": "전반적인 눈 건강",
+			"subtitle": "신뢰도 평균:",
+			"statsFooter": "최근 스캔과 습관을 바탕으로"
+		},
+		"conditions": {
+			"high": "눈의 피로 감지됨 - 휴식을 취하세요",
+			"moderate": "중간 정도의 눈의 피로 - 휴식을 고려하세요",
+			"normal": "이상 없음"
+		},
+		"statusLabels": {
+			"normal": "정상",
+			"blinkRate": "눈 깜빡임 횟수가 약간 낮음",
+			"eyeStrain": "눈의 피로 감지됨"
+		},
+		"statusTypes": {
+			"blinkRate": "눈 깜빡임 횟수",
+			"eyeStrain": "눈의 피로"
+		},
+		"normalRanges": {
+			"blinkRate": "정상 범위: 15-20회/분",
+			"perclose": "눈꺼풀 감는 비율"
+		},
+		"page": {
+			"reportNotFound": "보고서를 찾을 수 없음",
+			"reportNotFoundDesc": "요청한 보고서를 찾을 수 없습니다.",
+			"backToHistory": "← 기록으로 돌아가기",
+			"eyeScanReport": "눈 스캔 보고서",
+			"overallStatus": "전체 상태"
+		}
+	},
+	"history": {
+		"title": "기록 및 보고서",
+		"subtitle": "스캔을 검토하고 눈 건강 기록을 관리하세요",
+		"viewingData": "데이터 보기:",
+		"today": "오늘",
+		"eyeCareReport": "눈 건강 보고서",
+		"monthlyReport": "월간 눈 건강 보고서",
+		"annualReport": "연간 눈 건강 보고서",
+		"allRecordsSecure": "모든 기록이 안전하게 암호화되어 있습니다",
+		"exportAllData": "모든 데이터 내보내기",
+		"timeFilters": {
+			"today": "오늘",
+			"week": "이번 주",
+			"month": "이번 달",
+			"year": "올해"
+		},
+		"viewModes": {
+			"chartView": "차트 보기",
+			"tableView": "테이블 보기",
+			"chart": "차트",
+			"table": "테이블"
+		},
+		"actions": {
+			"quickView": "빠른 보기",
+			"viewReport": "보고서 보기"
+		},
+		"tableHeaders": {
+			"date": "날짜",
+			"results": "결과",
+			"actions": "작업"
+		},
+		"emptyState": {
+			"noHistory": "스캔 기록을 찾을 수 없음",
+			"selectedDate": "선택한 날짜",
+			"startTracking": "대시보드에서 추적을 시작하여 여기서 기록을 확인하세요"
+		},
+		"chartTitles": {
+			"blinkRate": "눈 깜빡임 횟수",
+			"eyeClosure": "눈 감는 시간",
+			"attention": "주의력",
+			"strainLevel": "피로 레벨"
+		},
+		"lastUpdate": "마지막 업데이트: 방금 전"
+	},
+	"live": {
+		"errorRetry": "다시 시도",
+		"loadingStates": {
+			"startingTracking": "추적 시작 중...",
+			"initializingCamera": "카메라 초기화 중..."
+		}
+	},
+	"icare": {
+		"sectionTitles": {
+			"eyeExercises": "눈 운동",
+			"eyeProducts": "눈 건강 제품",
+			"eyeSpecialists": "안과 전문의"
+		},
+		"exerciseModal": {
+			"comparisonTitle": "운동 결과 비교",
+			"buttons": {
+				"markComplete": "운동 완료로 표시",
+				"restart": "운동 다시 시작"
+			}
+		},
+		"hospitalModal": {
+			"actionButtons": {
+				"website": "웹사이트",
+				"directions": "길찾기",
+				"reviews": "리뷰"
+			},
+			"detailLabels": {
+				"address": "주소:",
+				"getThere": "찾아가기:",
+				"hours": "운영 시간:"
+			}
+		},
+		"productModal": {
+			"aboutProduct": "이 제품에 대해",
+			"buyNow": "Amazon에서 구매"
+		}
+	},
+	"profile": {
+		"sectionTitles": {
+			"recentEyeScan": "최근 눈 스캔",
+			"scanHistory": "스캔 기록",
+			"personalisedAdvice": "맞춤형 조언"
+		},
+		"recentScan": {
+			"title": "눈 스캔 보고서 기록",
+			"confidenceLabel": "신뢰도 평균:",
+			"viewFullReport": "전체 보고서 보기"
+		},
+		"scanHistory": {
+			"title": "눈 스캔 보고서 기록",
+			"description": "과거 눈 스캔 결과 및 변화 추적"
+		},
+		"profileCard": {
+			"ctaButton": "눈 건강을 확인해보세요"
+		}
+	},
+	"settings": {
+		"sectionTitles": {
+			"accountSettings": "계정 설정",
+			"aiScanSettings": "AI 스캔 설정",
+			"discoveryPreferences": "발견 기본 설정",
+			"notification": "알림",
+			"privacyData": "개인정보 보호 및 데이터",
+			"helpSupport": "도움말 및 지원"
+		},
+		"accountSettings": {
+			"profileInfo": "프로필 정보",
+			"changePassword": "비밀번호 변경"
+		},
+		"discoveryPreferences": {
+			"specialistRegion": "전문의 지역",
+			"productCategories": "제품 카테고리"
+		},
+		"aiScanSettings": {
+			"autoSaveScanHistory": "스캔 기록 자동 저장",
+			"autoShareScans": "스캔 자동 공유",
+			"predictionSensitivity": "예측 민감도"
+		},
+		"notifications": {
+			"healthScanReport": "건강 스캔 보고서",
+			"newProductArticles": "새 제품 및 기사"
+		},
+		"privacyData": {
+			"appPermission": "앱 권한",
+			"downloadMyData": "내 데이터 다운로드",
+			"deleteMyData": "내 데이터 삭제"
+		},
+		"helpSupport": {
+			"faq": "자주 묻는 질문",
+			"contactUs": "문의하기",
+			"termsPrivacy": "이용 약관 및 개인정보 보호정책"
+		},
+		"logOut": "로그아웃"
+	},
+	"homepage": {
+		"workCard": {
+			"headerTitle": "신뢰와 증명",
+			"steps": [
+				{
+					"number": "1",
+					"title": "과학 기반 신뢰성",
+					"description": "정확성과 포괄성을 위해 동료 심사 연구에 기반한 임상적으로 검증된 눈의 피로 지표를 적용합니다."
+				},
+				{
+					"number": "2",
+					"title": "의료 및 AI 전문가가 개발",
+					"description": "디지털 헬스케어와 직장 웰니스 분야의 풍부한 경험을 가진 의료 및 AI/ML 엔지니어들이 개발했습니다."
+				},
+				{
+					"number": "3",
+					"title": "기업급 개인정보 보호",
+					"description": "모든 눈 데이터는 로컬에서 처리됩니다. 비디오나 개인 시각 정보는 저장되거나 전송되지 않습니다. 암호화된 집계 메트릭만 공유됩니다."
+				}
+			],
+			"buttonText": "눈 건강 여정 시작하기"
+		},
+		"sections": {
+			"whyEyeHealthSection": {
+				"title": "직장에서 눈 건강이 중요한 이유",
+				"imageAlt": "잘 조명된 책상에서 편안하게 작업하는 사람",
+				"problemSubheading": "문제",
+				"impactSubheading": "영향"
+			},
+			"featuresSection": {
+				"title": "레스큐 아이즈의 기능"
+			},
+			"organizationBenefitsSection": {
+				"title": "조직을 위한 이점"
+			},
+			"builtForBusinessSection": {
+				"title": "비즈니스를 위해 구축됨",
+				"imageAlt": "분석 대시보드를 표시하는 데스크톱 컴퓨터"
+			},
+			"whoWeWorkWithSection": {
+				"title": "협력 대상"
+			},
+			"corporateWellnessSection": {
+				"title": "기업 웰니스 ROI",
+				"beforeSubheading": "레스큐 아이즈 도입 전:",
+				"afterSubheading": "레스큐 아이즈 도입 후:"
+			}
+		}
+	},
+	"footer": {
+		"copyright": "AuraCore에서 정성껏 제작",
+		"termsText": "이용약관",
+		"privacyText": "개인정보 보호정책",
+		"cookiesText": "쿠키 정책"
+	},
+	"data": {
+		"articles": [
+			{
+				"title": "안과 검진이 필요한 신호",
+				"description": "정기적인 안과 검사는 눈 건강 유지에 중요합니다.",
+				"image": "/mockData/eye.jpg"
+			},
+			{
+				"title": "디지털 눈 피로를 예방하는 방법",
+				"description": "화면으로 인한 디지털 눈 피로를 예방하는 방법을 알아보세요.",
+				"image": "/mockData/eye2.jpg"
+			},
+			{
+				"title": "디지털 눈 피로를 예방하는 방법",
+				"description": "매일 눈을 건강하게 유지하기 위한 팁.",
+				"image": "/mockData/eye3.jpg"
+			}
+		],
+		"exercises": [
+			{
+				"title": "1분 눈 피로 해소",
+				"image": "/mockData/exercise.png",
+				"youtubeUrl": "https://www.youtube.com/embed/RoIYAoAalmI?autoplay=1",
+				"description": "눈 피로를 완화하고 눈 건강을 개선하는 자연스러운 기법을 배워보세요."
+			},
+			{
+				"title": "시력을 개선하는 눈 운동",
+				"image": "/mockData/exercise2.png",
+				"youtubeUrl": "https://www.youtube.com/embed/UMS0QJ_aefY?autoplay=1",
+				"description": "화면 시간에서 눈을 정기적으로 쉬게 하는 20-20-20 규칙을 익혀보세요."
+			},
+			{
+				"title": "시력을 개선하는 눈 운동",
+				"image": "/mockData/exercise3.png",
+				"youtubeUrl": "https://www.youtube.com/embed/mqXR8O2VJLo/autoplay=1",
+				"description": "이러한 운동으로 눈 깜빡임 패턴과 눈의 수분을 개선하세요."
+			}
+		],
+		"hospitals": [
+			{
+				"title": "비전맥스 안과 센터",
+				"description": "다니엘 세네칼 의사 - 레이저 시력 교정 및 안구건조증 치료",
+				"image": "https://thfvnext.bing.com/th/id/OLC.680As1HhiIWWoA480x360?w=334&h=200&c=8&rs=1&qlt=90&o=6&cdv=1&dpr=1.3&pid=Local&ucfimg=1",
+				"address": "575 100 St SW Suite 102, Edmonton, AB T6X 0S8, Canada",
+				"phone": "+1 780-452-4111",
+				"website": "https://www.visionmaxeye.com",
+				"hours": "월-목: 8:00 AM – 4:00 PM, 금: 8:00 AM – 2:00 PM",
+				"rating": "4.7 (355개 Google 리뷰)",
+				"additionalImages": ["/mockData/hospital.jpg", "/mockData/loc1.png"]
+			},
+			{
+				"title": "스텔라 통합 안과 클리닉",
+				"description": "미랄 메타 의사 - 종합 안과 및 소아 안과",
+				"image": "https://stellareyecare.ca/wp-content/uploads/2021/05/glaucoma_before.jpg",
+				"address": "6413 Cartmell Pl SW #203, Edmonton, AB T6W 4V4, Canada",
+				"phone": "+1 780-652-2033",
+				"website": "https://stellareyecare.ca",
+				"hours": "월-금: 7:30 AM – 4:30 PM",
+				"rating": "4.6 (287개 Google 리뷰)",
+				"additionalImages": ["/mockData/hospital2.jpg", "/mockData/loc2.png"]
+			},
+			{
+				"title": "알버타 망막 컨설턴트",
+				"description": "파람팔 그레왈 의사 - 종합 안과 및 유전성 안질환",
+				"image": "https://thfvnext.bing.com/th/id/OIP.FgBy9PzUWldw6UW6IUBR-gAAAA?w=175&h=180&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+				"address": "10924 107 Ave NW Unit 400, Edmonton, AB T5H 0X5, Canada",
+				"phone": "+1 780-448-1801",
+				"website": "https://www.alberta-retina.com",
+				"hours": "월-금: 7:30 AM – 4:30 PM",
+				"rating": "4.5 (192개 Google 리뷰)",
+				"additionalImages": ["/mockData/hospital3.jpg", "/mockData/loc3.png"]
+			},
+			{
+				"title": "킹 라식",
+				"description": "마흐타 라술리 의사 - 라식 수술 및 PRK 전문의",
+				"image": "https://www.kinglasik.com/wp-content/uploads/2023/11/convenient-locations-kl.jpg",
+				"address": "10430 61 Ave NW #101, Edmonton, AB T6H 2J3, Canada",
+				"phone": "+1 855-308-3937",
+				"website": "https://www.kinglasik.ca",
+				"hours": "월-금: 8:30 AM – 4:30 PM",
+				"rating": "4.8 (421개 Google 리뷰)",
+				"additionalImages": ["/mockData/hospital4.jpg", "/mockData/loc4.png"]
+			}
+		],
+		"products": [
+			{
+				"key": "1",
+				"title": "시스테인 울트라 윤활 안약",
+				"description": "장시간 지속되는 안구 건조 완화",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.shld.net%2Frpx%2Fi%2Fs%2Fi%2Fspin%2Fimage%2Fspin_prod_ec_798652201%3F%3Fhei%3D64%26wid%3D64%26qlt%3D50&f=1&nofb=1&ipt=6336610cd7eccb506ffafe8a65be941c7a998f5b2310cd14d0496fc99d0a08cc",
+				"amazonUrl": "https://a.co/d/bg4ZmV4",
+				"detailedDescription": "시스테인 울트라는 확장된 보호로 안구 건조에 오래 지속되는 완화를 제공합니다. 이 방부제가 없는 공식은 자연 눈물막의 복원을 돕고 최대 12시간의 편안함을 제공합니다. 컴퓨터 사용자와 디지털 눈 피로를 경험하는 사람들에게 완벽합니다."
+			},
+			{
+				"key": "2",
+				"title": "블루라이트 차단 안경",
+				"description": "눈 피로 완화를 위한 컴퓨터 안경",
+				"image": "https://www.bing.com/th?id=OPAC.AoK52YLTOlcjVA474C474&o=5&pid=21.1&w=140&h=140&rs=1&qlt=100&dpr=1.3&o=2",
+				"amazonUrl": "https://a.co/d/fM3ZNde",
+				"detailedDescription": "눈의 피로, 두통을 줄이고 수면의 질을 개선하도록 설계된 전문가용 블루라이트 차단 안경. 반사 방지 코팅과 UV 보호 기능을 갖추고 있습니다. 장시간 컴퓨터 사용과 게임 세션에 이상적입니다."
+			},
+			{
+				"key": "3",
+				"title": "테라티어스 안약",
+				"description": "고급 안구 건조 치료",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F7631474b-dbeb-4a13-880f-d6b8d027ce91.c1eeb61bd5c9c95619cf00d50f8bfe52.jpeg&f=1&nofb=1&ipt=a3bb0598a16c44e149df3224d04046441ea48e25eab778606c7eda01d9194ea1",
+				"amazonUrl": "https://a.co/d/b74wgvP",
+				"detailedDescription": "테라티어스는 건조하고 자극받은 눈에 즉각적이고 오래 지속되는 완화를 제공합니다. 이 독특한 전해질 균형 공식은 자연 눈물을 모방하고 눈의 자연적인 수분 균형 복원을 돕습니다. 매일 사용하기에 안전합니다."
+			},
+			{
+				"key": "4",
+				"title": "컴퓨터 모니터 라이트 바",
+				"description": "눈의 피로를 줄이는 화면 조명",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.xXN8Hszkq_lWRXUihu6GaAHaHa%3Fpid%3DApi&f=1&ipt=bb9de08a6bfb44a20ccec3acba5bee8f78b08a201957e9b290c39e5b4f0d871b&ipo=images",
+				"amazonUrl": "https://a.co/d/1IjADOj",
+				"detailedDescription": "화면 눈부심과 눈의 피로를 줄이면서 컴퓨터 작업에 최적의 조명을 제공하는 전문가용 모니터 라이트 바. 하루 종일 작업 환경에 맞춰 조정 가능한 밝기와 색온도 기능을 갖추고 있습니다."
+			},
+			{
+				"key": "5",
+				"title": "오메가-3 눈 건강 보조제",
+				"description": "안구 건조와 시력 건강 지원",
+				"image": "https://m.media-amazon.com/images/I/71sxoUp-UvL._AC_SL1500_.jpg",
+				"amazonUrl": "https://a.co/d/eDVaXvG",
+				"detailedDescription": "눈 건강을 위해 특별히 제조된 프리미엄 오메가-3 보조제. 눈물 생성을 지원하고 염증을 줄이는 EPA와 DHA를 함유하고 있습니다. 안구 건조 증상과 전반적인 눈 건강 유지에 임상적으로 입증되었습니다."
+			}
+		],
+		"businessFeatures": [
+			{
+				"title": "완벽한 통합",
+				"description": "노트북과 데스크톱의 표준 웹카메라로 작동합니다."
+			},
+			{
+				"title": "유연한 정책",
+				"description": "회사 웰니스 가이드라인에 맞춰 휴식 알림을 조정합니다."
+			},
+			{
+				"title": "분석 대시보드",
+				"description": "팀 전체의 실시간 웰니스 지표를 확인합니다."
+			},
+			{
+				"title": "보안을 고려한 설계",
+				"description": "GDPR, PIPEDA, SOC 2에 준수합니다."
+			}
+		],
+		"benefitsOrganisation": [
+			{
+				"title": "생산성 향상",
+				"description": "피곤한 눈으로 인한 집중력과 성과 저하를 방지합니다"
+			},
+			{
+				"title": "웰빙 지원",
+				"description": "일상의 편안함과 참여도를 향상시키는 측정 가능한 웰니스 이니셔티브"
+			},
+			{
+				"title": "건강 비용 절감",
+				"description": "만성 눈 피로를 예방하고 안과 방문과 병가를 줄입니다"
+			},
+			{
+				"title": "관심 표현",
+				"description": "직원 건강을 중요시하는 적극적인 고용주로서 회사를 포지셔닝합니다"
+			}
+		],
+		"features": [
+			{
+				"title": "지속적인 모니터링",
+				"description": "기존 웹카메라를 통해 백그라운드에서 작동—워크플로우를 방해하지 않습니다."
+			},
+			{
+				"title": "실시간 분석",
+				"description": "AI를 사용하여 피로의 초기 징후를 감지: 눈 깜빡임 횟수 감소, 시선 피로, 화면 눈부심 영향."
+			},
+			{
+				"title": "사전 예방적 가이드",
+				"description": "피로가 성과에 영향을 미치기 전에 짧고 맞춤형 운동, 마이크로 휴식, 인체공학적 조정을 제안합니다."
+			},
+			{
+				"title": "데이터 기반 인사이트",
+				"description": "개인을 위한 실행 가능한 보고서와 HR 및 웰니스 리드를 위한 집계된 익명 인사이트를 생성합니다."
+			}
+		],
+		"whoWeWorkWith": [
+			{
+				"title": "기업 사무실",
+				"description": "하루 종일 화면으로 작업하는 대규모 팀."
+			},
+			{
+				"title": "콜센터",
+				"description": "대량의 화면 시간, 여러 교대 근무."
+			},
+			{
+				"title": "기술 및 크리에이티브 에이전시",
+				"description": "장시간의 디자인, 코딩, 편집 작업."
+			},
+			{
+				"title": "원격 및 하이브리드 팀",
+				"description": "직원이 어디서 일하든 웰니스 지원."
+			}
+		],
+		"problemPoints": [
+			"직원들이 매일 6-10시간을 화면 앞에서 보냅니다.",
+			"디지털 눈 피로는 두통, 피로, 집중력 저하를 유발합니다.",
+			"시각적 불편함은 생산성 손실의 주요 요인입니다."
+		],
+		"impactPoints": ["병가 증가", "생산성 저하", "번아웃 증가"],
+		"beforeRescueEyes": [
+			"직원 3명 중 1명이 매일 두통이나 눈 불편함을 보고",
+			"1인당 하루 평균 20-40분의 생산성 손실"
+		],
+		"afterRescueEyes": [
+			"2주 내에 증상 감소 보고",
+			"웰니스 설문조사에서 참여도 점수 향상",
+			"눈 피로와 관련된 병가의 문서화된 감소"
+		],
+		"mockReport": {
+			"date": "2025년 6월 16일, 14:37",
+			"confidenceAverage": 95,
+			"condition": "이상 없음",
+			"percentage": 85
+		},
+		"mockReportBrief": {
+			"date": "2025년 6월 16일, 14:37",
+			"confidenceAverage": 95,
+			"condition": "이상 없음"
+		},
+		"userData": {
+			"name": "프리탐",
+			"email": "preetham123@mail.com",
+			"image": "/mockData/profile.png"
+		},
+		"reportHistory": [
+			{
+				"date": "2025년 7월 17일",
+				"time": "08:45 AM",
+				"result": "정상",
+				"status": "정상",
+				"action": "빠른 보기"
+			},
+			{
+				"date": "2025년 7월 10일",
+				"time": "08:07 AM",
+				"result": "눈 깜빡임 횟수가 약간 낮음",
+				"status": "눈 깜빡임 횟수",
+				"action": "보고서 보기"
+			},
+			{
+				"date": "2025년 7월 13일",
+				"time": "06:45 AM",
+				"result": "눈의 피로 감지됨",
+				"status": "눈의 피로",
+				"action": "보고서 보기"
+			},
+			{
+				"date": "2025년 7월 10일",
+				"time": "08:07 AM",
+				"result": "눈 깜빡임 횟수가 약간 낮음",
+				"status": "눈 깜빡임 횟수",
+				"action": "보고서 보기"
+			},
+			{
+				"date": "2025년 7월 13일",
+				"time": "06:45 AM",
+				"result": "눈의 피로 감지됨",
+				"status": "눈의 피로",
+				"action": "보고서 보기"
+			}
+		]
+	}
+}

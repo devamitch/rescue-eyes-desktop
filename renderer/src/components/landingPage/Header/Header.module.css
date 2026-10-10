@@ -1,0 +1,78 @@
+.header {
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px 0rem;
+}
+
+.logoText {
+	font-size: 2rem;
+	line-height: 2rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	color: var(--metricValue);
+}
+
+.navLinks {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.startButton {
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: var(--lightMetricValue);
+	color: var(--cardBackground);
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.startButton:hover {
+	cursor: pointer;
+}
+
+.signInButton {
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: var(--cardBackground);
+	color: var(--metricValue);
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.signInButton:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+
+	.logoText {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+	.navLinks {
+		gap: 0.5rem;
+	}
+	.startButton,
+	.signInButton {
+	    padding: 10px 20px;
+        font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.navLinks {
+		gap: 0.5rem;
+	}
+	.startButton,
+	.signInButton {
+	    padding: 7px 10px;
+        font-size: 12px;
+		border-radius: 8px;
+	}
+}

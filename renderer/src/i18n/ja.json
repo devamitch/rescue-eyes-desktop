@@ -1,0 +1,761 @@
+{
+	"metadata": {
+		"appName": "レスキューアイズ",
+		"title": "レスキューアイズ - AIによる目の健康モニタリング",
+		"titleTemplate": "%s - レスキューアイズ",
+		"description": "高度なAIを活用した目の健康モニタリングで、チームの健康維持、集中力向上、最高のパフォーマンスをサポートします。"
+	},
+	"common": {
+		"loading": "読み込み中...",
+		"retry": "再試行",
+		"error": "エラー:",
+		"success": "成功！",
+		"cancel": "キャンセル",
+		"save": "保存",
+		"close": "閉じる",
+		"back": "戻る",
+		"next": "次へ",
+		"previous": "前へ",
+		"notAvailable": "該当なし",
+		"minutes": "分",
+		"screenTime": "スクリーンタイム",
+		"language": "言語",
+		"changeLanguage": "言語を変更"
+	},
+	"strainLevels": {
+		"low": "低",
+		"moderate": "中程度",
+		"high": "高い",
+		"veryHigh": "非常に高い",
+		"tired": "疲れた",
+		"sleepy": "眠い",
+		"exhausted": "疲弊した"
+	},
+	"units": {
+		"blinksPerMin": "/分",
+		"percentage": "%",
+		"years": "年",
+		"level": "レベル",
+		"bpm": "bpm",
+		"close": "閉じる",
+		"strain": "負荷",
+		"ratio": "比率",
+		"mm": "mm",
+		"min": "分"
+	},
+	"pathnames": {
+		"/": "/",
+		"/dashboard": "/ダッシュボード",
+		"/live": "/ライブ",
+		"/icare": "/アイケア",
+		"/history": "/履歴",
+		"/settings": "/設定",
+		"/profile": "/プロフィール",
+		"/signin": "/サインイン",
+		"/register": "/登録",
+		"/about": "/概要",
+		"/contact": "/お問い合わせ",
+		"/privacy": "/プライバシー",
+		"/terms": "/利用規約",
+		"/help": "/ヘルプ",
+		"/faq": "/よくある質問",
+		"/blog": "/ブログ",
+		"/news": "/ニュース",
+		"/products": "/製品",
+		"/services": "/サービス",
+		"/pricing": "/価格",
+		"/features": "/機能",
+		"/download": "/ダウンロード",
+		"/upload": "/アップロード",
+		"/search": "/検索",
+		"/cart": "/カート",
+		"/checkout": "/決済",
+		"/orders": "/注文",
+		"/wishlist": "/ウィッシュリスト",
+		"/notifications": "/通知",
+		"/messages": "/メッセージ",
+		"/friends": "/友達",
+		"/groups": "/グループ",
+		"/events": "/イベント",
+		"/calendar": "/カレンダー",
+		"/tasks": "/タスク",
+		"/projects": "/プロジェクト",
+		"/team": "/チーム",
+		"/reports": "/レポート",
+		"/analytics": "/分析",
+		"/insights": "/インサイト",
+		"/resources": "/リソース",
+		"/tutorials": "/チュートリアル",
+		"/guides": "/ガイド",
+		"/support": "/サポート",
+		"/feedback": "/フィードバック",
+		"/reviews": "/レビュー",
+		"/ratings": "/評価",
+		"/community": "/コミュニティ",
+		"/forum": "/フォーラム",
+		"/chat": "/チャット",
+		"/video": "/ビデオ",
+		"/audio": "/オーディオ",
+		"/images": "/画像",
+		"/documents": "/ドキュメント"
+	},
+	"highUsage": {
+		"title": "高使用量",
+		"description": "推奨使用制限を超えています",
+		"warning": "警告：長時間の使用は眼精疲労を引き起こす可能性があります",
+		"recommendation": "休憩を取って目を休めてください",
+		"duration": "高使用量の期間",
+		"level": "使用強度レベル"
+	},
+	"header": {
+		"logoText": "レスキューアイズ",
+		"signInButton": "サインイン",
+		"getStartedButton": "始める"
+	},
+	"hero": {
+		"heading": "レスキューアイズ：",
+		"highlight": "よく見える。賢く働く。",
+		"subheading": "チームを健康で集中力があり、最高のパフォーマンスを維持するAI搭載の目の健康管理。",
+		"getStartedButton": "始める",
+		"learnMoreButton": "詳細を見る",
+		"imageAlt": "ランディングページのヒーロー画像"
+	},
+	"navigation": {
+		"sidebar": {
+			"logoText": "レスキューアイ",
+			"dashboard": "ダッシュボード",
+			"liveFeed": "ライブフィード",
+			"icare": "アイケア",
+			"history": "履歴",
+			"settings": "設定"
+		},
+		"navbar": {
+			"searchPlaceholder": "検索...",
+			"profile": "プロフィール",
+			"settings": "設定",
+			"logout": "ログアウト",
+			"userMenuLabel": "ユーザーメニュー",
+			"profileAlt": "プロフィール"
+		}
+	},
+	"auth": {
+		"register": {
+			"title": "アカウントを作成",
+			"subtitle": "プレミアム目の健康機能にアクセスするために登録してください",
+			"nameLabel": "氏名",
+			"namePlaceholder": "氏名を入力してください",
+			"emailLabel": "メールアドレス",
+			"emailPlaceholder": "メールアドレスを入力してください",
+			"passwordLabel": "パスワード",
+			"passwordPlaceholder": "パスワードを作成（最低4文字）",
+			"confirmPasswordLabel": "パスワード確認",
+			"confirmPasswordPlaceholder": "パスワードを確認してください",
+			"termsCheckboxText": "同意します",
+			"termsLinkText": "利用規約",
+			"andText": "と",
+			"privacyLinkText": "プライバシーポリシー",
+			"loadingButtonText": "アカウント作成中...",
+			"submitButtonText": "アカウント作成",
+			"signInLinkText": "すでにアカウントをお持ちですか？",
+			"signInText": "サインイン",
+			"successMessage": "登録が成功しました！メールを確認してアカウントを認証してください。",
+			"socialDividerText": "または次でサインアップ",
+			"continueWithApple": "リンゴを続ける",
+			"validationErrors": {
+				"allFieldsRequired": "すべてのフィールドが必要です。",
+				"passwordMinLength": "パスワードは最低4文字である必要があります。",
+				"passwordMismatch": "パスワードが一致しません。",
+				"invalidEmail": "有効なメールアドレスを入力してください。",
+				"termsRequired": "利用規約に同意する必要があります。"
+			},
+			"firebaseErrors": {
+				"emailInUse": "このメールアドレスは既に登録されています。サインインを試してください。",
+				"weakPassword": "パスワードをより強くしてください（最低4文字）。",
+				"invalidEmail": "有効なメールアドレスを入力してください。",
+				"operationNotAllowed": "登録が一時的に無効化されています。後でもう一度お試しください。",
+				"networkError": "ネットワークエラー。接続を確認してもう一度お試しください。",
+				"configurationError": "Firebase設定エラー。サポートにお問い合わせください。",
+				"defaultError": "予期しないエラーが発生しました。もう一度お試しください。"
+			}
+		},
+		"login": {
+			"title": "おかえりなさい",
+			"subtitle": "目の健康ダッシュボードにアクセスするためにサインインしてください",
+			"emailLabel": "メールアドレス",
+			"emailPlaceholder": "メールアドレスを入力してください",
+			"passwordLabel": "パスワード",
+			"passwordPlaceholder": "パスワードを入力してください",
+			"forgotPasswordText": "パスワードを忘れましたか？",
+			"signInButton": "サインイン",
+			"loadingButtonText": "サインイン中...",
+			"successMessage": "ログイン成功！ダッシュボードにリダイレクト中...",
+			"createAccountText": "アカウントをお持ちでないですか？",
+			"createAccountLink": "アカウント作成",
+			"resetTitle": "パスワードリセット",
+			"resetSubtitle": "パスワードリセットリンクを受け取るためにメールアドレスを入力してください",
+			"sendResetButton": "リセットリンクを送信",
+			"resetLoadingText": "送信中...",
+			"backToLoginButton": "ログインに戻る",
+			"resetSuccessTitle": "メール送信完了！",
+			"resetSuccessMessage": "パスワードリセットメールを送信しました！受信箱で手順を確認してください。",
+			"socialDividerText": "またはこちらでログイン",
+			"continueWithApple": "リンゴを続ける",
+			"validationErrors": {
+				"emptyFields": "すべてのフィールドを入力してください。",
+				"invalidEmail": "有効なメールアドレスを入力してください。"
+			},
+			"firebaseErrors": {
+				"userNotFound": "このメールアドレスのアカウントが見つかりません。メールアドレスを確認するか、新しいアカウントを登録してください。",
+				"wrongPassword": "パスワードが間違っています。もう一度お試しするか、パスワードを忘れた場合はリセットしてください。",
+				"invalidCredentials": "無効なログイン情報です。メールアドレスとパスワードを確認してください。",
+				"invalidEmailFormat": "メールアドレスの形式が正しくありません。タイプミスがないか確認してください。",
+				"accountDisabled": "このアカウントは無効化されています。サポートまでお問い合わせください。",
+				"tooManyAttempts": "ログイン試行回数が多すぎます。しばらく待ってからもう一度お試しするか、パスワードをリセットしてください。",
+				"networkError": "ネットワーク接続に失敗しました。インターネット接続を確認してもう一度お試しください。",
+				"configurationError": "Firebase設定エラー。サポートにお問い合わせください。",
+				"defaultError": "予期しないエラーが発生しました。もう一度お試しするか、問題が続く場合はサポートにお問い合わせください。"
+			}
+		}
+	},
+	"dashboard": {
+		"eyeScanReportTitle": "目のスキャンレポート",
+		"articlesTitle": "記事",
+		"errorMessage": "エラー：",
+		"retryButton": "再試行"
+	},
+	"eyeMetrics": {
+		"labels": {
+			"blinkRate": "まばたき回数",
+			"eyeClosure": "目を閉じる時間",
+			"eyeStrain": "目の疲れ",
+			"tiredness": "疲労度",
+			"attentionLevel": "集中度",
+			"eyeAge": "目の年齢",
+			"faceAge": "顔の年齢",
+			"eyeAspectRatio": "目のアスペクト比",
+			"pupilDilation": "瞳孔の拡張",
+			"squintIntensity": "しかめ面の強度",
+			"strainLevel": "負荷レベル",
+			"attention": "注意"
+		},
+		"recommendedValues": {
+			"blinkRate": "15-20回/分",
+			"eyeClosure": "< 5%",
+			"eyeStrain": "低",
+			"tiredness": "低",
+			"attentionLevel": "> 80%",
+			"eyeAge": "実年齢と同じ",
+			"faceAge": "25-35歳",
+			"eyeAspectRatio": "2.5-4.0",
+			"pupilDilation": "2-8 mm",
+			"squintIntensity": "< 10%"
+		},
+		"stream": {
+			"title": "ライブ目の指標ストリーム",
+			"liveIndicator": "ライブ",
+			"currentMetrics": "現在の指標",
+			"placeholder": "データがまだありません。リアルタイムの指標を見るために追跡を開始してください。"
+		},
+		"attentionStates": {
+			"good": "良好",
+			"poor": "不良"
+		},
+		"strainLevels": {
+			"low": "低",
+			"moderate": "中",
+			"high": "高"
+		}
+	},
+	"reports": {
+		"card": {
+			"title": "総合的な目の健康",
+			"subtitle": "信頼度平均：",
+			"statsFooter": "最近のスキャンと習慣に基づく"
+		},
+		"conditions": {
+			"high": "目の疲れを検出 - 休憩を取ってください",
+			"moderate": "中程度の目の疲れ - 休憩を検討してください",
+			"normal": "異常は検出されませんでした"
+		},
+		"statusLabels": {
+			"normal": "正常",
+			"blinkRate": "まばたき回数がやや少ない",
+			"eyeStrain": "目の疲れを検出"
+		},
+		"statusTypes": {
+			"blinkRate": "まばたき回数",
+			"eyeStrain": "目の疲れ"
+		},
+		"normalRanges": {
+			"blinkRate": "正常範囲: 15-20回/分",
+			"perclose": "まぶたの閉じる割合"
+		},
+		"page": {
+			"reportNotFound": "レポートが見つかりません",
+			"reportNotFoundDesc": "要求されたレポートが見つかりませんでした。",
+			"backToHistory": "← 履歴に戻る",
+			"eyeScanReport": "目のスキャンレポート",
+			"overallStatus": "全体的な状態"
+		}
+	},
+	"history": {
+		"title": "履歴とレポート",
+		"subtitle": "スキャンを確認し、目の健康記録を管理する",
+		"viewingData": "データを表示中：",
+		"today": "今日",
+		"eyeCareReport": "目のケアレポート",
+		"monthlyReport": "月間目の健康レポート",
+		"annualReport": "年間目の健康レポート",
+		"allRecordsSecure": "すべての記録は安全に暗号化されています",
+		"exportAllData": "すべてのデータをエクスポート",
+		"timeFilters": {
+			"today": "今日",
+			"week": "今週",
+			"month": "今月",
+			"year": "今年"
+		},
+		"viewModes": {
+			"chartView": "チャート表示",
+			"tableView": "テーブル表示",
+			"chart": "チャート",
+			"table": "テーブル"
+		},
+		"actions": {
+			"quickView": "クイック表示",
+			"viewReport": "レポート表示"
+		},
+		"tableHeaders": {
+			"date": "日付",
+			"results": "結果",
+			"actions": "操作"
+		},
+		"emptyState": {
+			"noHistory": "スキャン履歴が見つかりません",
+			"selectedDate": "選択した日付",
+			"startTracking": "ダッシュボードで追跡を開始して、ここで履歴を確認してください"
+		},
+		"chartTitles": {
+			"blinkRate": "まばたき回数",
+			"eyeClosure": "目を閉じる時間",
+			"attention": "注意",
+			"strainLevel": "負荷レベル"
+		},
+		"lastUpdate": "最終更新: たった今"
+	},
+	"live": {
+		"errorRetry": "再試行",
+		"loadingStates": {
+			"startingTracking": "追跡開始中...",
+			"initializingCamera": "カメラ初期化中..."
+		}
+	},
+	"icare": {
+		"sectionTitles": {
+			"eyeExercises": "目の体操",
+			"eyeProducts": "目の健康商品",
+			"eyeSpecialists": "目の専門医"
+		},
+		"exerciseModal": {
+			"comparisonTitle": "運動結果比較",
+			"buttons": {
+				"markComplete": "運動完了としてマーク",
+				"restart": "運動を再開始"
+			}
+		},
+		"hospitalModal": {
+			"actionButtons": {
+				"website": "ウェブサイト",
+				"directions": "道順",
+				"reviews": "レビュー"
+			},
+			"detailLabels": {
+				"address": "住所：",
+				"getThere": "アクセス：",
+				"hours": "営業時間："
+			}
+		},
+		"productModal": {
+			"aboutProduct": "この製品について",
+			"buyNow": "Amazonで購入"
+		}
+	},
+	"profile": {
+		"sectionTitles": {
+			"recentEyeScan": "最近の目のスキャン",
+			"scanHistory": "スキャン履歴",
+			"personalisedAdvice": "パーソナライズドアドバイス"
+		},
+		"recentScan": {
+			"title": "目のスキャンレポート履歴",
+			"confidenceLabel": "信頼度平均：",
+			"viewFullReport": "完全レポートを表示"
+		},
+		"scanHistory": {
+			"title": "目のスキャンレポート履歴",
+			"description": "過去の目のスキャン結果と変化を追跡"
+		},
+		"profileCard": {
+			"ctaButton": "目の健康をチェックしましょう"
+		}
+	},
+	"settings": {
+		"sectionTitles": {
+			"accountSettings": "アカウント設定",
+			"aiScanSettings": "AIスキャン設定",
+			"discoveryPreferences": "発見設定",
+			"notification": "通知",
+			"privacyData": "プライバシーとデータ",
+			"helpSupport": "ヘルプとサポート"
+		},
+		"accountSettings": {
+			"profileInfo": "プロフィール情報",
+			"changePassword": "パスワード変更"
+		},
+		"discoveryPreferences": {
+			"specialistRegion": "専門医地域",
+			"productCategories": "商品カテゴリ"
+		},
+		"aiScanSettings": {
+			"autoSaveScanHistory": "スキャン履歴自動保存",
+			"autoShareScans": "スキャン自動共有",
+			"predictionSensitivity": "予測感度"
+		},
+		"notifications": {
+			"healthScanReport": "健康スキャンレポート",
+			"newProductArticles": "新商品と記事"
+		},
+		"privacyData": {
+			"appPermission": "アプリ権限",
+			"downloadMyData": "マイデータをダウンロード",
+			"deleteMyData": "マイデータを削除"
+		},
+		"helpSupport": {
+			"faq": "よくある質問",
+			"contactUs": "お問い合わせ",
+			"termsPrivacy": "利用規約とプライバシーポリシー"
+		},
+		"logOut": "ログアウト"
+	},
+	"homepage": {
+		"workCard": {
+			"headerTitle": "信頼と証明",
+			"steps": [
+				{
+					"number": "1",
+					"title": "科学に基づく信頼性",
+					"description": "査読済みの研究に基づいた臨床的に検証された目の疲れ指標を適用し、正確性と包括性を実現。"
+				},
+				{
+					"number": "2",
+					"title": "医療・AI専門家により開発",
+					"description": "デジタルヘルスと職場ウェルネスの豊富な経験を持つ医療・AI/MLエンジニアによって開発。"
+				},
+				{
+					"number": "3",
+					"title": "企業グレードのプライバシー",
+					"description": "すべての目のデータはローカルで処理。ビデオや個人の視覚情報は保存または送信されません。暗号化された集計メトリックのみが共有されます。"
+				}
+			],
+			"buttonText": "目の健康の旅を始める"
+		},
+		"sections": {
+			"whyEyeHealthSection": {
+				"title": "職場での目の健康が重要な理由",
+				"imageAlt": "快適に照明された机で作業する人",
+				"problemSubheading": "問題",
+				"impactSubheading": "影響"
+			},
+			"featuresSection": {
+				"title": "レスキューアイズの機能"
+			},
+			"organizationBenefitsSection": {
+				"title": "組織のメリット"
+			},
+			"builtForBusinessSection": {
+				"title": "ビジネス向けに構築",
+				"imageAlt": "分析ダッシュボードを表示するデスクトップコンピュータ"
+			},
+			"whoWeWorkWithSection": {
+				"title": "提携先"
+			},
+			"corporateWellnessSection": {
+				"title": "企業ウェルネスROI",
+				"beforeSubheading": "レスキューアイズ導入前：",
+				"afterSubheading": "レスキューアイズ導入後："
+			}
+		}
+	},
+	"footer": {
+		"copyright": "AuraCoreが心を込めて作成",
+		"termsText": "利用規約",
+		"privacyText": "プライバシーポリシー",
+		"cookiesText": "クッキーポリシー"
+	},
+	"data": {
+		"articles": [
+			{
+				"title": "目の検査が必要なサイン",
+				"description": "定期的な目の検査は目の健康を維持するために重要です。",
+				"image": "/mockData/eye.jpg"
+			},
+			{
+				"title": "デジタル目疲れを防ぐ方法",
+				"description": "スクリーンからのデジタル目疲れを防ぐ方法を学びましょう。",
+				"image": "/mockData/eye2.jpg"
+			},
+			{
+				"title": "デジタル目疲れを防ぐ方法",
+				"description": "毎日目を健康に保つためのヒント。",
+				"image": "/mockData/eye3.jpg"
+			}
+		],
+		"exercises": [
+			{
+				"title": "1分間の目疲れ解消",
+				"image": "/mockData/exercise.png",
+				"youtubeUrl": "https://www.youtube.com/embed/RoIYAoAalmI?autoplay=1",
+				"description": "目疲れを和らげ、目の健康を改善する自然な技術を学びましょう。"
+			},
+			{
+				"title": "視力を改善する目の体操",
+				"image": "/mockData/exercise2.png",
+				"youtubeUrl": "https://www.youtube.com/embed/UMS0QJ_aefY?autoplay=1",
+				"description": "スクリーンタイムから目を定期的に休ませる20-20-20ルールをマスターしましょう。"
+			},
+			{
+				"title": "視力を改善する目の体操",
+				"image": "/mockData/exercise3.png",
+				"youtubeUrl": "https://www.youtube.com/embed/mqXR8O2VJLo/autoplay=1",
+				"description": "これらの体操でまばたきパターンと目の潤いを改善しましょう。"
+			}
+		],
+		"hospitals": [
+			{
+				"title": "ビジョンマックス眼科センター",
+				"description": "ダニエル・セネカル医師 - レーザー視力矯正・ドライアイ治療",
+				"image": "https://thfvnext.bing.com/th/id/OLC.680As1HhiIWWoA480x360?w=334&h=200&c=8&rs=1&qlt=90&o=6&cdv=1&dpr=1.3&pid=Local&ucfimg=1",
+				"address": "575 100 St SW Suite 102, Edmonton, AB T6X 0S8, Canada",
+				"phone": "+1 780-452-4111",
+				"website": "https://www.visionmaxeye.com",
+				"hours": "月-木: 8:00 AM – 4:00 PM, 金: 8:00 AM – 2:00 PM",
+				"rating": "4.7 (355 Googleレビュー)",
+				"additionalImages": ["/mockData/hospital.jpg", "/mockData/loc1.png"]
+			},
+			{
+				"title": "ステラー統合眼科クリニック",
+				"description": "ミラル・メータ医師 - 総合眼科・小児眼科",
+				"image": "https://stellareyecare.ca/wp-content/uploads/2021/05/glaucoma_before.jpg",
+				"address": "6413 Cartmell Pl SW #203, Edmonton, AB T6W 4V4, Canada",
+				"phone": "+1 780-652-2033",
+				"website": "https://stellareyecare.ca",
+				"hours": "月-金: 7:30 AM – 4:30 PM",
+				"rating": "4.6 (287 Googleレビュー)",
+				"additionalImages": ["/mockData/hospital2.jpg", "/mockData/loc2.png"]
+			},
+			{
+				"title": "アルバータ網膜コンサルタント",
+				"description": "パランパル・グレワル医師 - 総合眼科・遺伝性眼疾患",
+				"image": "https://thfvnext.bing.com/th/id/OIP.FgBy9PzUWldw6UW6IUBR-gAAAA?w=175&h=180&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3&ucfimg=1",
+				"address": "10924 107 Ave NW Unit 400, Edmonton, AB T5H 0X5, Canada",
+				"phone": "+1 780-448-1801",
+				"website": "https://www.alberta-retina.com",
+				"hours": "月-金: 7:30 AM – 4:30 PM",
+				"rating": "4.5 (192 Googleレビュー)",
+				"additionalImages": ["/mockData/hospital3.jpg", "/mockData/loc3.png"]
+			},
+			{
+				"title": "キングレーシック",
+				"description": "マフタ・ラスーリ医師 - レーシック手術・PRK専門医",
+				"image": "https://www.kinglasik.com/wp-content/uploads/2023/11/convenient-locations-kl.jpg",
+				"address": "10430 61 Ave NW #101, Edmonton, AB T6H 2J3, Canada",
+				"phone": "+1 855-308-3937",
+				"website": "https://www.kinglasik.ca",
+				"hours": "月-金: 8:30 AM – 4:30 PM",
+				"rating": "4.8 (421 Googleレビュー)",
+				"additionalImages": ["/mockData/hospital4.jpg", "/mockData/loc4.png"]
+			}
+		],
+		"products": [
+			{
+				"key": "1",
+				"title": "システイン ウルトラ 潤滑目薬",
+				"description": "長時間ドライアイ緩和",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.shld.net%2Frpx%2Fi%2Fs%2Fi%2Fspin%2Fimage%2Fspin_prod_ec_798652201%3F%3Fhei%3D64%26wid%3D64%26qlt%3D50&f=1&nofb=1&ipt=6336610cd7eccb506ffafe8a65be941c7a998f5b2310cd14d0496fc99d0a08cc",
+				"amazonUrl": "https://a.co/d/bg4ZmV4",
+				"detailedDescription": "システインウルトラは拡張保護でドライアイの長時間緩和を提供します。この防腐剤フリー処方は自然な涙膜の回復を助け、最大12時間の快適さを提供します。コンピュータユーザーやデジタル目疲れを経験している方に最適です。"
+			},
+			{
+				"key": "2",
+				"title": "ブルーライトカット眼鏡",
+				"description": "目疲れ緩和のためのコンピュータ眼鏡",
+				"image": "https://www.bing.com/th?id=OPAC.AoK52YLTOlcjVA474C474&o=5&pid=21.1&w=140&h=140&rs=1&qlt=100&dpr=1.3&o=2",
+				"amazonUrl": "https://a.co/d/fM3ZNde",
+				"detailedDescription": "目疲れ、頭痛を軽減し、睡眠の質を改善するように設計されたプロ仕様のブルーライトカット眼鏡。反射防止コーティングとUV保護機能付き。長時間のコンピュータ使用やゲームセッションに最適です。"
+			},
+			{
+				"key": "3",
+				"title": "セラティアーズ点眼薬",
+				"description": "高度ドライアイ治療",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F7631474b-dbeb-4a13-880f-d6b8d027ce91.c1eeb61bd5c9c95619cf00d50f8bfe52.jpeg&f=1&nofb=1&ipt=a3bb0598a16c44e149df3224d04046441ea48e25eab778606c7eda01d9194ea1",
+				"amazonUrl": "https://a.co/d/b74wgvP",
+				"detailedDescription": "セラティアーズは乾燥し刺激を受けた目に即座で長時間の緩和を提供します。このユニークな電解質バランス処方は自然な涙を模倣し、目の自然な潤いバランスの回復を助けます。毎日の使用に安全です。"
+			},
+			{
+				"key": "4",
+				"title": "コンピューターモニターライトバー",
+				"description": "目疲れを軽減するスクリーンライト",
+				"image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.xXN8Hszkq_lWRXUihu6GaAHaHa%3Fpid%3DApi&f=1&ipt=bb9de08a6bfb44a20ccec3acba5bee8f78b08a201957e9b290c39e5b4f0d871b&ipo=images",
+				"amazonUrl": "https://a.co/d/1IjADOj",
+				"detailedDescription": "コンピュータ作業に最適な照明を提供し、スクリーンの眩しさと目疲れを軽減するプロ仕様のモニターライトバー。一日を通して作業環境に合わせて調整可能な明るさと色温度機能付き。"
+			},
+			{
+				"key": "5",
+				"title": "オメガ3 目の健康サプリメント",
+				"description": "ドライアイと視力健康のサポート",
+				"image": "https://m.media-amazon.com/images/I/71sxoUp-UvL._AC_SL1500_.jpg",
+				"amazonUrl": "https://a.co/d/eDVaXvG",
+				"detailedDescription": "目の健康のために特別に配合されたプレミアムオメガ3サプリメント。涙の生産をサポートし炎症を減らすEPAとDHAを含有。ドライアイ症状と全体的な目の健康維持に臨床的に証明されています。"
+			}
+		],
+		"businessFeatures": [
+			{
+				"title": "シームレス統合",
+				"description": "ノートパソコンやデスクトップの標準的なWebカメラで動作します。"
+			},
+			{
+				"title": "柔軟なポリシー",
+				"description": "企業のウェルネスガイドラインと休憩リマインダーを連携します。"
+			},
+			{
+				"title": "分析ダッシュボード",
+				"description": "チーム全体のリアルタイムウェルネス指標を表示します。"
+			},
+			{
+				"title": "セキュリティ重視の設計",
+				"description": "GDPR、PIPEDA、SOC 2に準拠。"
+			}
+		],
+		"benefitsOrganisation": [
+			{
+				"title": "生産性向上",
+				"description": "疲れた目による集中力とパフォーマンスの低下を防ぎます"
+			},
+			{
+				"title": "ウェルビーイングサポート",
+				"description": "日常の快適さとエンゲージメントを向上させる測定可能なウェルネスイニシアチブ"
+			},
+			{
+				"title": "健康コスト削減",
+				"description": "慢性的な目疲れを防ぎ、眼科受診と病欠を削減します"
+			},
+			{
+				"title": "配慮を示す",
+				"description": "従業員の健康を重視する積極的な雇用者として会社を位置づけます"
+			}
+		],
+		"features": [
+			{
+				"title": "継続的モニタリング",
+				"description": "既存のWebカメラを介してバックグラウンドで動作—ワークフローを妨げません。"
+			},
+			{
+				"title": "リアルタイム分析",
+				"description": "AIを使用して疲れの早期兆候を検出：まばたき回数の減少、視線疲労、スクリーン眩しさの影響。"
+			},
+			{
+				"title": "先回りガイダンス",
+				"description": "疲れがパフォーマンスに影響する前に、短くてカスタマイズされた体操、マイクロブレイク、人間工学的調整を提案。"
+			},
+			{
+				"title": "データ駆動インサイト",
+				"description": "個人向けの実行可能なレポートと、HRやウェルネスリード向けの集計された匿名インサイトを生成。"
+			}
+		],
+		"whoWeWorkWith": [
+			{
+				"title": "企業オフィス",
+				"description": "一日中スクリーンで作業する大規模チーム。"
+			},
+			{
+				"title": "コールセンター",
+				"description": "大量のスクリーンタイム、複数シフト。"
+			},
+			{
+				"title": "技術・クリエイティブエージェンシー",
+				"description": "長時間のデザイン、コーディング、編集作業。"
+			},
+			{
+				"title": "リモート・ハイブリッドチーム",
+				"description": "従業員がどこで働いてもウェルネスサポート。"
+			}
+		],
+		"problemPoints": [
+			"従業員は毎日6-10時間をスクリーンの前で過ごします。",
+			"デジタル目疲れは頭痛、疲労、集中力低下を引き起こします。",
+			"視覚的不快感は生産性低下の主要因子です。"
+		],
+		"impactPoints": ["病欠の増加", "生産性の低下", "燃え尽き症候群の増加"],
+		"beforeRescueEyes": [
+			"従業員の3人に1人が毎日頭痛や目の不快感を報告",
+			"1人あたり1日平均20-40分の生産性損失"
+		],
+		"afterRescueEyes": [
+			"2週間以内に症状の軽減を報告",
+			"ウェルネス調査でのエンゲージメントスコア向上",
+			"目疲れに関連する病欠の文書化された減少"
+		],
+		"mockReport": {
+			"date": "2025年6月16日、14:37",
+			"confidenceAverage": 95,
+			"condition": "異常は検出されませんでした",
+			"percentage": 85
+		},
+		"mockReportBrief": {
+			"date": "2025年6月16日、14:37",
+			"confidenceAverage": 95,
+			"condition": "異常は検出されませんでした"
+		},
+		"userData": {
+			"name": "プリータム",
+			"email": "preetham123@mail.com",
+			"image": "/mockData/profile.png"
+		},
+		"reportHistory": [
+			{
+				"date": "2025年7月17日",
+				"time": "08:45 AM",
+				"result": "正常",
+				"status": "正常",
+				"action": "クイック表示"
+			},
+			{
+				"date": "2025年7月10日",
+				"time": "08:07 AM",
+				"result": "まばたき回数がやや少ない",
+				"status": "まばたき回数",
+				"action": "レポート表示"
+			},
+			{
+				"date": "2025年7月13日",
+				"time": "06:45 AM",
+				"result": "目の疲れを検出",
+				"status": "目の疲れ",
+				"action": "レポート表示"
+			},
+			{
+				"date": "2025年7月10日",
+				"time": "08:07 AM",
+				"result": "まばたき回数がやや少ない",
+				"status": "まばたき回数",
+				"action": "レポート表示"
+			},
+			{
+				"date": "2025年7月13日",
+				"time": "06:45 AM",
+				"result": "目の疲れを検出",
+				"status": "目の疲れ",
+				"action": "レポート表示"
+			}
+		]
+	}
+}

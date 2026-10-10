@@ -1,0 +1,12 @@
+{
+	"extends": "stylelint-config-standard-scss",
+	"rules": {
+		"string-quotes": "single",
+		"color-no-invalid-hex": true,
+		"selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }],
+		"block-no-empty": null,
+		"unit-allowed-list": ["em", "rem", "%", "px", "vh", "deg", "vw", "s", "fr", "ch"],
+		"selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+		"scss/at-extend-no-missing-placeholder": null
+	}
+}

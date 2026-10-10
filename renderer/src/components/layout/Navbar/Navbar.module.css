@@ -1,0 +1,214 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+}
+.backButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	background: var(--cardBackground);
+	border-radius: 50%;
+	transition: background-color 0.2s ease;
+}
+
+.menuButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	background: var(--cardBackground);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+.header {
+	font-weight: 700;
+	font-size: 28px;
+	color: var(--metricValue);
+    text-transform: capitalize !important;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	align-items: center;
+}
+.logo {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--metricValue);
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+.navItems {
+	display: flex;
+	gap: 4px; 
+	text-transform: capitalize;
+
+}
+.searchButton {
+	display: flex;
+	padding: 11px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	margin: 5px;
+	background: var(--cardBackground);
+	cursor: pointer;
+}
+.searchInput {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	outline: none;
+	margin-left: 10px;
+}
+.searchInput::placeholder {
+	color: var(--lightMetricValue);
+}
+
+.iconButton {
+	display: flex;
+	padding: 11px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	margin: 5px;
+	background: var(--cardBackground);
+	cursor: pointer;
+}
+
+.userSection {
+	display: flex;
+	width: fit-content;
+	padding: 4px 20px 4px 4px;
+	margin: 1px 0px;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+	border-radius: 24px;
+	background: var(--cardBackground);
+    color: var(--metricValue);
+}
+
+.avatar {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.userName {
+	font-weight: 600;
+	font-size: 15px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.userEmail {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 12px;
+	color: var(--lightMetricValue);
+}
+
+
+@media (max-width: 768px) {
+	.navbar {
+		padding: 16px;
+		gap: 0.5rem;
+	}
+	.header {
+		font-size: 22px;
+	}
+	.logo {
+		font-size: 22px;
+	}
+	.navItems {
+		gap: 2px;
+	}
+
+	.searchButton {
+		width: 42px;
+		padding: 11px;
+		margin: 2px;
+	}
+
+	.searchInput {
+		display: none; 
+	}
+
+	.userSection {
+		padding: 0px;
+		gap: 0;
+		width: auto;
+		min-width: auto;
+	}
+	.userSection span {
+		display: none;
+	}
+
+	.userSection svg {
+		display: none; 
+	}
+
+	.avatar {
+		width: 45px;
+		height: 45px;
+	}
+
+	.iconButton {
+		padding: 9px;
+		margin: 2px;
+	}
+}
+@media (max-width: 600px) {
+	.navbar {
+		z-index: 10;
+	}
+	
+}
+@media (max-width: 480px) {
+
+	.header {
+		font-size: 20px;
+	}
+    .logo {
+		font-size: 20px;
+	}
+	.searchButton {
+		width: 38px;
+		padding: 9px;
+	}
+
+	.iconButton {
+		padding: 8px;
+	}
+
+	.avatar {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media (max-width: 360px) {
+
+	.header {
+		font-size: 18px;
+	}
+	.logo {
+		font-size: 18px;
+	}
+	.avatar {
+		width: 32px;
+		height: 32px;
+	}
+	.menuButton{
+		padding: 6px;
+	}
+	
+}

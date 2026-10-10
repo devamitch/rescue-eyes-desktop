@@ -1,0 +1,249 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--metricValue);
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--cardBackground);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.welcomeText h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--metricValue);
+}
+
+.welcomeText p {
+  font-size: 1.125rem;
+  color: var(--lightText);
+  margin: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyeScanSection {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.scanPrompt {
+  text-align: center;
+  padding: 2rem;
+  background: var(--subtleCardBackground);
+  border-radius: 20px;
+}
+
+.scanIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--lightMetricValue);
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.scanPrompt h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--metricValue);
+}
+
+.scanPrompt p {
+  font-size: 14px;
+  color: var(--lightText);
+  margin: 0 0 24px 0;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.startButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--lightMetricValue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.startButton:hover {
+  background: var(--metricValue);
+  transform: translateY(-1px);
+}
+
+.startButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--cardBackground);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.welcomeText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.welcomeText h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark, #0056b3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcomeText p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.eyeScanSection {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.errorBanner {
+  background-color: hsl(var(--destructive) / 0.1);
+  color: hsl(var(--destructive));
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border-left: 4px solid hsl(var(--destructive));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.streamSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.retryButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--metricValue);
+  color: var(--cardBackground);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+  background-color: #92A29C;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .mainSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+  }
+}
+
+.leftMetrics, .rightMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .leftMetrics, .rightMetrics {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cameraSection {
+  position: relative;
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .cameraSection {
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftMetrics, .rightMetrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .leftMetrics, .rightMetrics {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  } 
+  .leftMetrics > *, .rightMetrics > * {
+    flex: 1;
+  }
+  
+  .heroSection {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .welcomeText h1 {
+    font-size: 1.5rem;
+  }
+  
+  .welcomeText p {
+    font-size: 1rem;
+  }
+}
